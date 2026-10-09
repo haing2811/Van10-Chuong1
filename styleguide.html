@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light" data-fs="medium">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Styleguide Thu Quan Co</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/thu-quan-tokens.css">
+<link rel="stylesheet" href="css/thu-quan.css">
+<style>
+.sg-wrap{max-width:70rem;margin:0 auto;padding:2rem 1rem 6rem}
+.sg-scroll{padding:2rem 1.5rem;margin:0 0 2rem}
+.sg-sec{margin:0 0 3rem}
+.sg-sec > h2{font-family:var(--font-display);font-size:1.5rem;margin:0 0 .4rem}
+.sg-sec > p.lead{color:var(--text-quiet);font-family:var(--font-ui);font-size:.9rem;max-width:62ch}
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(9rem,1fr));gap:.6rem;margin-top:1rem}
+.swatch{border:1px solid var(--line-soft);border-radius:var(--radius-seal);overflow:hidden}
+.swatch i{display:block;height:3.2rem}
+.swatch span{display:block;font-family:var(--font-ui);font-size:.75rem;padding:.35rem .5rem;background:var(--slip-bg)}
+.type-d{font-family:var(--font-display);font-weight:700;font-size:2rem;line-height:1.3;margin:.6rem 0}
+.type-b{max-width:var(--measure)}
+.type-u{font-family:var(--font-ui);font-size:.9rem;color:var(--text-quiet)}
+.didac{border:1px dashed var(--line-hair);padding:.6rem .8rem;margin-top:.6rem}
+.demo-row{display:flex;gap:.7rem;flex-wrap:wrap;align-items:center;margin:.7rem 0}
+.scrollbox{max-height:8rem;overflow:auto;border:1px solid var(--line-soft);padding:.7rem;background:var(--slip-bg);max-width:34rem}
+.prog{height:.5rem;background:var(--line-soft);border-radius:999px;overflow:hidden;max-width:24rem}
+.prog>span{display:block;height:100%;width:45%;background:var(--text-ink)}
+.ring{width:5rem;height:5rem;border-radius:50%;border:4px solid var(--line-soft);border-top-color:var(--state-seal);display:inline-block}
+.timer-demo{display:flex;gap:1rem;align-items:flex-end}
+.stick{width:.7rem;height:6rem;background:linear-gradient(180deg,#7a5a30,#4a3a27);position:relative;border-radius:2px}
+.stick::before{content:"";position:absolute;top:0;left:0;right:0;height:1.6rem;background:linear-gradient(180deg,#c9b183,#8a7c64);border-radius:2px}
+.smoke{display:block;width:2px;height:4rem;background:linear-gradient(180deg,var(--text-faint),transparent);margin:0 auto;opacity:.7}
+input[type="range"].brush{width:14rem;accent-color:var(--state-seal)}
+.flash{border:1px solid var(--slip-edge);background:var(--slip-bg);padding:1rem;max-width:24rem;transform:rotate(-.6deg)}
+.modal-bg{position:fixed;inset:0;background:var(--surface-scrim);display:none;align-items:center;justify-content:center;z-index:50;padding:1rem}
+.modal-bg.open{display:flex}
+.modal-slip{background:var(--slip-bg);border-top:3px solid var(--line-hair);max-width:28rem;padding:1.5rem;position:relative}
+.tip{position:relative;display:inline-block;border-bottom:2px dotted var(--line-hair);cursor:help}
+.tip .pop{position:absolute;left:0;bottom:130%;display:none;background:var(--slip-bg);border:1px solid var(--slip-edge);padding:.5rem .7rem;font-size:.85rem;max-width:16rem;z-index:5}
+.tip:hover .pop,.tip:focus-within .pop{display:block}
+.rule{border:0;border-top:1px solid var(--line-hair);margin:1.5rem 0;position:relative}
+.rule::after{content:"";position:absolute;left:50%;top:-5px;width:9px;height:9px;background:var(--state-seal);transform:translateX(-50%) rotate(45deg);border-radius:2px}
+.sg-head{display:flex;flex-wrap:wrap;gap:1rem;align-items:baseline;justify-content:space-between;margin-bottom:1.5rem}
+.sg-head h1{font-family:var(--font-display);font-size:clamp(2rem,5vw,3rem);margin:0;line-height:1.2}
+</style>
+</head>
+<body>
+<div class="mist" aria-hidden="true"></div>
+<a class="skip-link" href="#sg-main">Bo qua toi noi dung</a>
+<div class="sg-wrap">
+  <div class="sg-head">
+    <div>
+      <p class="type-u" style="margin:0">Thu quan co, bang mau song</p>
+      <h1>Styleguide <span class="han" aria-hidden="true">印</span></h1>
+      <p class="type-u">Moi mau, chu, nut, moc an deu lay tu token. Trang nay dung duoc khi mo truc tiep file.</p>
+    </div>
+    <div class="desk-tools" role="group" aria-label="Tuy chinh hien thi">
+      <button type="button" id="sg-lamp" aria-pressed="false">Dem</button>
+      <button type="button" id="sg-dec" aria-label="Giam co chu">A-</button>
+      <button type="button" id="sg-inc" aria-label="Tang co chu">A+</button>
+    </div>
+  </div>
+
+  <div class="scroll-paper grain sg-scroll">
+    <section class="sg-sec" aria-labelledby="sg-palette">
+      <h2 id="sg-palette">Bang mau giay, muc, son</h2>
+      <p class="lead">Giay vang cu chiem uu the. Do son hiem, chi dung cho moc va khoanh khac quan trong. Vang cu chi lam duong toc. Jade dung cho tin lang.</p>
+      <div class="swatches">
+        <div class="swatch"><i style="background:var(--paper-100)"></i><span>paper 100 sang giua</span></div>
+        <div class="swatch"><i style="background:var(--paper-200)"></i><span>paper 200 nen doc</span></div>
+        <div class="swatch"><i style="background:var(--paper-300)"></i><span>paper 300 ven mo</span></div>
+        <div class="swatch"><i style="background:var(--paper-400)"></i><span>paper 400 vet tra</span></div>
+        <div class="swatch"><i style="background:var(--paper-500)"></i><span>paper 500 ria chay</span></div>
+        <div class="swatch"><i style="background:var(--ink-700)"></i><span>ink 700 chu chinh</span></div>
+        <div class="swatch"><i style="background:var(--ink-500)"></i><span>ink 500 chu phu</span></div>
+        <div class="swatch"><i style="background:var(--seal-600)"></i><span>seal 600 moc son</span></div>
+        <div class="swatch"><i style="background:var(--gold-500)"></i><span>gold 500 duong toc</span></div>
+        <div class="swatch"><i style="background:var(--jade-700)"></i><span>jade 700 tin lang</span></div>
+        <div class="swatch"><i style="background:var(--night-300)"></i><span>night 300 nen dem</span></div>
+        <div class="swatch"><i style="background:var(--torch-500)"></i><span>torch 500 anh den</span></div>
+      </div>
+    </section>
+
+    <section class="sg-sec" aria-labelledby="sg-type">
+      <h2 id="sg-type">Chu viet</h2>
+      <p class="type-d">Suc hap dan cua truyen ke</p>
+      <p class="type-b">Than Tru Troi doi troi, dap cot chong troi. Quan nguc khum num, thay tho lai bung chau muc, tu tu dam to net chu tren tam lua trang.</p>
+      <p class="type-u">Nhan UI bang Be Vietnam Pro, nho va lang, dung cho nut, nhan, the treo.</p>
+      <p class="diac type-b">Kiem tra dau tieng Viet: U  A  A  O  Y  A  E,  u o a e, Hue, Nguyen Tuan, Chuyen chuc Phan su den Tan Vien.</p>
+      <p class="type-b"><span class="han" aria-hidden="true" style="font-size:2rem;color:var(--text-faint)">讀 寫 說 聽 印</span></p>
+    </section>
+
+    <section class="sg-sec" aria-labelledby="sg-nav">
+      <h2 id="sg-nav">Dieu huong: gia cuon va the treo</h2>
+      <p class="lead">Ba phan mon la ba cuon sach. The treo ben canh danh dau tung doan, the dang doc tien len va co cham son.</p>
+      <div class="demo-row">
+        <span class="seal-mini" aria-hidden="true">印</span>
+        <span class="tag-link" style="min-width:10rem">Van ban 5<span class="han" aria-hidden="true">讀</span></span>
+        <span class="tag-link" aria-current="true" style="min-width:10rem">Canh cho chu<span class="han" aria-hidden="true">印</span></span>
+      </div>
+      <div class="rack-bar" aria-hidden="true"></div>
+    </section>
+
+    <section class="sg-sec" aria-labelledby="sg-ctl">
+      <h2 id="sg-ctl">Nut, o nhap, truot, chon</h2>
+      <div class="demo-row">
+        <button class="btn-brush" type="button">Mo cuon sach</button>
+        <button class="btn-brush ghost" type="button">Xem goi y</button>
+      </div>
+      <div class="field" style="max-width:28rem">
+        <label for="sg-ta">Doan van 150 chu cua em</label>
+        <textarea id="sg-ta" placeholder="Em go doan van o day, may tu luu"></textarea>
+      </div>
+      <div class="demo-row">
+        <label class="type-u" for="sg-range">Muc do chac chan</label>
+        <input class="brush" id="sg-range" type="range" min="0" max="100" value="40">
+      </div>
+      <div class="demo-row">
+        <label class="seal-radio"><input type="checkbox" checked>Da hieu tinh huong truyen</label>
+        <label class="seal-radio"><input type="radio" name="sg-r" checked>Dat</label>
+        <label class="seal-radio"><input type="radio" name="sg-r">Chua dat</label>
+      </div>
+    </section>
+
+    <section class="sg-sec" aria-labelledby="sg-blocks">
+      <h2 id="sg-blocks">Khoi noi dung: phieu, trac nghiem, bang ke <span class="stamp-draft">Nháp - cần duyệt</span></h2>
+      <div class="slip" id="sg-slip">
+        <span class="lbl">Goi y tham khao</span>
+        <p class="type-b">Hai con nguoi doi lap ve vi the lai gap nhau o long yeu cai dep va trong nguoi tai. Do la tinh huong treo tre ma dac sac.</p>
+      </div>
+      <div class="demo-row">
+        <button class="btn-brush ghost" type="button" id="sg-slip-btn" aria-expanded="true">An phieu</button>
+      </div>
+      <div class="quiz-ok"><span class="seal-press" aria-hidden="true">印</span><p class="type-b" style="margin:0"><strong>Dung.</strong> Moc son dong xuong, y da chac.</p></div>
+      <div class="quiz-no"><span class="blot" aria-hidden="true"></span><p class="type-b" style="margin:0"><strong>Chua dung.</strong> Vet muc loang nhe, doc lai doan canh cho chu roi thu lai.</p></div>
+      <div class="margin-note"><span class="lbl">Chu y</span>Loi khuyen giu thien luong la trong tam cua canh cho chu.</div>
+      <div class="flash"><span class="lbl type-u">The gap: Hoai bao tung hoanh</span><p class="type-b">Uoc mo, khat vong lon, muon hoat dong manh me, tu do.</p></div>
+      <table class="ruled">
+        <tr><th>Tieu chi</th><th>Dat</th><th>Chua dat</th></tr>
+        <tr><td>Neu ten truyen, ten tac gia</td><td><label class="seal-radio"><input type="radio" name="sg-t1" checked>Dat</label></td><td><label class="seal-radio"><input type="radio" name="sg-t1">Chua dat</label></td></tr>
+        <tr><td>Luan diem ro rang, co dan chung</td><td><label class="seal-radio"><input type="radio" name="sg-t2">Dat</label></td><td><label class="seal-radio"><input type="radio" name="sg-t2" checked>Chua dat</label></td></tr>
+      </table>
+    </section>
+
+    <section class="sg-sec" aria-labelledby="sg-find">
+      <h2 id="sg-find">Tim kiem, chu thich, hop thoai, tien trinh, den</h2>
+      <div class="field" style="max-width:28rem">
+        <label for="sg-q">Tim trong sach (Ctrl K)</label>
+        <input type="text" id="sg-q" placeholder="Go: Huan Cao, quan nguc, Han Viet">
+      </div>
+      <p class="type-b">Nhan vat <span class="tip" tabindex="0">biet nhan lien tai<span class="pop">Biet nhin nguoi tai, thuong nguoi tai. Loi Huan Cao cam tam long quan nguc.</span></span> la chia khoa cua truyen.</p>
+      <div class="demo-row">
+        <button class="btn-brush ghost" type="button" id="sg-modal-btn">Mo hop thoai</button>
+      </div>
+      <p class="type-u">Tien trinh doc: net co ve dan theo vi tri</p>
+      <div class="prog" aria-hidden="true"><span></span></div>
+      <div class="timer-demo" style="margin-top:1rem">
+        <div style="text-align:center"><span class="smoke" aria-hidden="true"></span><div class="stick" aria-hidden="true"></div><p class="type-u">Nhang noi 5 phut</p></div>
+        <p class="type-d" style="margin:0">05:00</p>
+      </div>
+      <div class="demo-row"><span class="ring" aria-hidden="true"></span><p class="type-u">Trang thai cho: cay co ve mot net roi nhac len, khong dung vong xoay mac dinh.</p></div>
+      <div class="scrollbox" tabindex="0">
+        <p class="type-b">Hop cuon nay co thanh cuon rieng: ray toc vang, num go. Keo thu de xem. Noi dung dai de thanh cuon hien ra ma khong dung kieu mac dinh cua trinh duyet.</p>
+        <p class="type-b">Dem ay trai giam tinh Son chi con vang tieng mo tren vong canh. Khoi boc toa cay mat nhu dam chay nha. Anh sang do ruc cua bo duoc ro len ba cai dau nguoi cham chu tren tam lua trang.</p>
+      </div>
+      <hr class="rule">
+      <p class="type-u">Duong ke ngat doan co trien son o giua, khong phai gach ngang don.</p>
+    </section>
+
+    <section class="sg-sec" aria-labelledby="sg-motion">
+      <h2 id="sg-motion">Chuyen dong mau: muc, giay, co, den</h2>
+      <p class="lead">Bam tung nut de xem tung khoanh khac. Tat ca deu dung bien Dan, tat ngay khi giam chuyen dong.</p>
+      <div class="demo-row">
+        <button class="btn-brush" type="button" id="m-unroll">Trai cuon</button>
+        <button class="btn-brush" type="button" id="m-seal">Dong moc</button>
+        <button class="btn-brush" type="button" id="m-soak">Muc tham</button>
+        <button class="btn-brush" type="button" id="m-slip">Go phieu</button>
+      </div>
+      <div class="scroll-paper grain unroll-in" id="m-paper" style="border:1px solid var(--line-soft);padding:1rem;max-width:30rem">
+        <p class="type-b ink-soak" id="m-ink">Tam lua trang trai ra. Net chu vuong van hien dan nhu muc vua tham giay.</p>
+        <p style="margin:.4rem 0"><span class="seal-press seal-drop" id="m-seal-el" aria-hidden="true">印</span></p>
+        <div class="slip-fold" id="m-fold"><div><div class="slip"><span class="lbl">Phieu an</span><p class="type-b">Mieng giay duoc rut ra va mo phang, khong phai bat tat dot ngot.</p></div></div></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="modal-bg" id="sg-modal" role="dialog" aria-modal="true" aria-label="Hop thoai mau">
+  <div class="modal-slip">
+    <span class="lbl type-u">To giay dat tren ban</span>
+    <h2 style="font-family:var(--font-display);margin:.3rem 0">Canh cho chu</h2>
+    <p class="type-b">Day la hop thoai mau: mot to giay dat giua ban, nen mo la ban doc, dong bang nut ben duoi.</p>
+    <button class="btn-brush" type="button" id="sg-modal-close">Gap giay lai</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var root = document.documentElement;
+  var lamp = document.getElementById("sg-lamp");
+  function syncLamp() {
+    var dark = root.getAttribute("data-theme") === "dark";
+    lamp.textContent = dark ? "Sang" : "Dem";
+    lamp.setAttribute("aria-pressed", String(dark));
+  }
+  syncLamp();
+  lamp.addEventListener("click", function () {
+    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    syncLamp();
+  });
+  var order = ["small", "medium", "large"];
+  document.getElementById("sg-inc").addEventListener("click", function () {
+    var i = Math.min(order.length - 1, order.indexOf(root.getAttribute("data-fs")) + 1);
+    root.setAttribute("data-fs", order[i]);
+  });
+  document.getElementById("sg-dec").addEventListener("click", function () {
+    var i = Math.max(0, order.indexOf(root.getAttribute("data-fs")) - 1);
+    root.setAttribute("data-fs", order[i]);
+  });
+  var slip = document.getElementById("sg-slip");
+  var slipBtn = document.getElementById("sg-slip-btn");
+  slipBtn.addEventListener("click", function () {
+    var hidden = slip.style.display === "none";
+    slip.style.display = hidden ? "" : "none";
+    slipBtn.textContent = hidden ? "An phieu" : "Mo phieu";
+    slipBtn.setAttribute("aria-expanded", String(hidden));
+  });
+  var modal = document.getElementById("sg-modal");
+  document.getElementById("sg-modal-btn").addEventListener("click", function () {
+    modal.classList.add("open");
+    document.getElementById("sg-modal-close").focus();
+  });
+  document.getElementById("sg-modal-close").addEventListener("click", function () {
+    modal.classList.remove("open");
+    document.getElementById("sg-modal-btn").focus();
+  });
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) modal.classList.remove("open");
+  });
+  document.addEventListener("keydown", function (e) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+      e.preventDefault();
+      document.getElementById("sg-q").focus();
+    }
+    if (e.key === "Escape") modal.classList.remove("open");
+  });
+  function replay(id) {
+    var n = document.getElementById(id);
+    n.classList.remove("open");
+    n.classList.remove("pressed");
+    void n.offsetWidth;
+    if (id === "m-seal-el") {
+      n.classList.add("seal-drop");
+      n.classList.add("pressed");
+    } else {
+      n.classList.add("open");
+    }
+    if (id === "m-ink") {
+      n.style.animation = "none";
+      void n.offsetWidth;
+      n.style.animation = "";
+    }
+  }
+  document.getElementById("m-unroll").addEventListener("click", function () { replay("m-paper"); });
+  document.getElementById("m-seal").addEventListener("click", function () { replay("m-seal-el"); });
+  document.getElementById("m-soak").addEventListener("click", function () { replay("m-ink"); });
+  document.getElementById("m-slip").addEventListener("click", function () {
+    document.getElementById("m-fold").classList.toggle("open");
+  });
+})();
+</script>
+</body>
+</html>

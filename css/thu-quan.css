@@ -1,0 +1,495 @@
+/* thu-quan.css — "Cuộn kể chuyện" component layer.
+   Uses only tokens from thu-quan-tokens.css. No raw colors, no raw fonts.
+   Concepts: rack of scrolls, unrolled reading scroll, hanging câu đối tags,
+   brush progress edge, ink/brush/seal motion. */
+
+.rack-wrap {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4) var(--space-16);
+}
+
+/* ---------- Rack (home) ---------- */
+.rack-bar {
+  height: 0.9rem;
+  background: linear-gradient(180deg, var(--desk-100), var(--desk-300));
+  border-radius: 0.45rem;
+  box-shadow: 0 2px 6px var(--shadow-rack);
+}
+html[data-theme="dark"] .rack-bar {
+  background: linear-gradient(180deg, var(--roller-dark-hi), var(--roller-dark-lo));
+}
+
+.rack-scrolls {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+  margin-top: var(--space-8);
+}
+
+.scroll-card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--text-ink);
+}
+.scroll-roll {
+  border-radius: var(--radius-tag);
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+}
+.scroll-roll .roller {
+  height: 1.1rem;
+  background: linear-gradient(180deg, var(--desk-100), var(--desk-300));
+}
+html[data-theme="dark"] .scroll-roll .roller {
+  background: linear-gradient(180deg, var(--roller-dark-hi), var(--roller-dark-lo));
+}
+.scroll-sheet {
+  padding: var(--space-8) var(--space-4);
+  min-height: 16rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+.scroll-card.lead .scroll-sheet { min-height: 20rem; }
+.scroll-card.dim { opacity: 0.82; }
+.scroll-card.dim .scroll-sheet { min-height: 13rem; }
+
+.scroll-han {
+  font-size: 3.2rem;
+  line-height: 1;
+  color: var(--text-faint);
+}
+.scroll-card.lead .scroll-han { font-size: 4.4rem; }
+.scroll-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 0;
+  line-height: 1.3;
+}
+.scroll-desc {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--text-quiet);
+  margin: 0;
+  max-width: 32ch;
+}
+.scroll-go {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: auto;
+  border-bottom: 2px solid var(--line-hair);
+  padding-bottom: 0.1rem;
+}
+.scroll-progress {
+  height: 0.35rem;
+  width: 100%;
+  background: var(--line-soft);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: var(--space-2);
+}
+.scroll-progress > span {
+  display: block;
+  height: 100%;
+  width: 30%;
+  background: var(--text-ink);
+  border-radius: inherit;
+}
+.scroll-card .seal-mini {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+}
+
+/* Seal: rare, pressed unevenly, never an ordinary accent */
+.seal-mini, .seal-press {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--state-seal);
+  color: var(--paper-100);
+  font-family: var(--font-han);
+  border-radius: 46% 54% 52% 48% / 52% 46% 54% 48%;
+}
+.seal-mini {
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 1.2rem;
+  transform: rotate(-6deg);
+}
+.seal-press {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.6rem;
+  transform: rotate(4deg);
+}
+html[data-theme="dark"] .seal-mini,
+html[data-theme="dark"] .seal-press { color: var(--night-200); }
+
+/* ---------- Reading scroll page ---------- */
+.read-head {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: baseline;
+}
+.read-head .back {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  color: var(--text-quiet);
+  text-decoration: none;
+  border-bottom: 2px solid var(--line-hair);
+}
+.read-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.25;
+  margin: 0;
+}
+.read-kicker {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--text-quiet);
+  margin: 0;
+}
+
+.read-layout {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 var(--space-4) var(--space-16);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 12rem;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.read-scroll { min-width: 0; }
+.passage { position: relative; }
+.passage + .passage { margin-top: var(--space-8); }
+
+.passage-head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  border-bottom: 1px solid var(--line-hair);
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+.passage-head h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.35;
+  margin: 0;
+}
+.passage-head .han {
+  color: var(--text-faint);
+  font-size: 1.4rem;
+}
+
+.passage.p-bleed { max-width: none; }
+.passage.p-quiet { max-width: 56ch; }
+.passage p { max-width: var(--measure); }
+.passage ul { max-width: var(--measure); }
+
+.margin-note {
+  border-left: 3px solid var(--state-seal);
+  padding: var(--space-2) var(--space-4);
+  margin: var(--space-4) 0;
+  background: var(--slip-bg);
+  font-size: 0.95rem;
+}
+.margin-note .lbl {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  color: var(--state-seal);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.cine {
+  background: linear-gradient(180deg, var(--surface-cine-hi), var(--surface-cine-lo));
+  color: var(--text-cine);
+  border: 1px solid var(--line-cine);
+  padding: var(--space-8) var(--space-4);
+}
+.cine p { color: var(--text-cine-soft); }
+.cine .passage-head { border-bottom-color: var(--torch-500); }
+.cine .passage-head h2 { color: var(--text-cine-bright); }
+.cine .han { color: var(--torch-500); }
+
+/* Draft stamp: one per section, small, faded pencil */
+.stamp-draft {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-faint);
+  border: 1px dashed var(--text-faint);
+  border-radius: var(--radius-seal);
+  padding: 0.05rem 0.5rem;
+  margin-left: var(--space-2);
+  vertical-align: middle;
+  opacity: 0.85;
+}
+
+/* ---------- Hanging câu đối tags (section navigator) ---------- */
+.tags {
+  position: sticky;
+  top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tags li { margin: 0; }
+.tag-thread {
+  width: 2px;
+  height: 1.1rem;
+  background: var(--line-soft);
+  margin: 0 auto;
+}
+.tag-link {
+  display: block;
+  text-align: center;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-quiet);
+  background: var(--surface-tag);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-tag);
+  padding: var(--space-2) var(--space-1);
+  text-decoration: none;
+  line-height: 1.4;
+  transform-origin: top center;
+}
+.tag-link .han {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--text-faint);
+}
+.tag-link[aria-current="true"] {
+  color: var(--text-ink);
+  font-weight: 700;
+  border-color: var(--line-hair);
+  box-shadow: 0 3px 0 -1px var(--line-hair);
+}
+.tag-link[aria-current="true"]::after {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0.3rem auto 0;
+  background: var(--state-seal);
+  border-radius: 48% 52% 55% 45% / 50% 48% 52% 50%;
+}
+
+/* ---------- Brush buttons, inputs, slips ---------- */
+.btn-brush {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.95rem;
+  min-height: 44px;
+  padding: 0.55rem 1.3rem;
+  cursor: pointer;
+  border-radius: var(--radius-tag);
+  border: 1px solid var(--btn-ink-bg);
+  background: var(--btn-ink-bg);
+  color: var(--btn-ink-fg);
+  position: relative;
+}
+.btn-brush.ghost {
+  background: transparent;
+  color: var(--text-ink);
+  border: 1px solid var(--btn-ghost-line);
+}
+.btn-brush:active { transform: translateY(1px) scale(0.99); }
+
+.field label {
+  display: block;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: var(--space-1);
+}
+.field textarea,
+.field input[type="text"] {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-ink);
+  background: var(--input-bg);
+  border: 1px solid var(--input-line);
+  border-radius: var(--radius-seal);
+  padding: 0.7rem;
+}
+.field textarea { min-height: 7rem; resize: vertical; }
+
+.slip {
+  background: var(--slip-bg);
+  border: 1px solid var(--slip-edge);
+  border-top: 3px solid var(--line-hair);
+  padding: var(--space-4);
+  margin: var(--space-4) 0;
+  max-width: var(--measure);
+}
+.slip .lbl {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  color: var(--text-quiet);
+}
+
+.quiz-ok { display: flex; gap: var(--space-2); align-items: center; }
+.quiz-no { display: flex; gap: var(--space-2); align-items: center; }
+.blot {
+  width: 1.4rem;
+  height: 1.4rem;
+  background: var(--text-ink);
+  border-radius: 52% 48% 60% 40% / 45% 55% 45% 55%;
+  opacity: 0.75;
+  flex: 0 0 auto;
+}
+
+/* Manuscript tables: ruled rows, no boxed grid, no filled tracks */
+table.ruled {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: var(--measure);
+  margin: var(--space-4) 0;
+}
+table.ruled th {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  text-align: left;
+  padding: var(--space-2) var(--space-2);
+  border-bottom: 2px solid var(--line-hair);
+}
+table.ruled td {
+  padding: var(--space-2);
+  border-bottom: 1px solid var(--line-soft);
+  vertical-align: top;
+}
+.seal-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 44px;
+}
+.seal-radio input {
+  width: 1.3rem;
+  height: 1.3rem;
+  accent-color: var(--state-seal);
+}
+
+/* Lamp control (day/night) and size control as desk objects */
+.desk-tools {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+.desk-tools button {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 999px;
+  border: 1px solid var(--btn-ghost-line);
+  background: transparent;
+  color: var(--text-ink);
+  cursor: pointer;
+}
+
+/* ---------- Motion: ink, brush, seal, light (transform/opacity/clip only) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .ink-soak {
+    opacity: 0;
+    filter: blur(2px);
+    animation: soak var(--dur-brush) var(--ease-settle) forwards;
+  }
+  @keyframes soak { to { opacity: 1; filter: blur(0); } }
+
+  .seal-drop { transform: scale(1.6); opacity: 0; }
+  .seal-drop.pressed {
+    animation: press var(--dur-brush) var(--ease-press) forwards;
+  }
+  @keyframes press {
+    0% { transform: scale(1.6); opacity: 0; }
+    60% { transform: scale(0.96); opacity: 1; }
+    100% { transform: scale(1) rotate(4deg); opacity: 1; }
+  }
+
+  .unroll-in { clip-path: inset(0 0 100% 0); }
+  .unroll-in.open {
+    animation: unroll var(--dur-unroll) var(--ease-settle) forwards;
+  }
+  @keyframes unroll { to { clip-path: inset(0 0 0 0); } }
+
+  .slip-fold { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--dur-brush) var(--ease-settle); }
+  .slip-fold > div { overflow: hidden; }
+  .slip-fold.open { grid-template-rows: 1fr; }
+
+  .tag-link { transition: transform var(--dur-instant) var(--ease-settle), box-shadow var(--dur-instant) var(--ease-settle); }
+  .tag-link:hover { transform: rotate(1.2deg); }
+  .tag-link:active { transform: translateY(1px); }
+  .btn-brush, .scroll-card { transition: transform var(--dur-instant) var(--ease-settle); }
+  .scroll-card:hover { transform: translateY(-3px); }
+  .scroll-card:active { transform: translateY(0); }
+
+  .mist {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.5;
+    background: radial-gradient(40% 12% at 20% 70%, var(--mist-hi), transparent 70%),
+                radial-gradient(35% 10% at 75% 30%, var(--mist-lo), transparent 70%);
+    animation: drift 26s ease-in-out infinite alternate;
+  }
+  @keyframes drift {
+    from { transform: translate3d(-8px, 0, 0); }
+    to { transform: translate3d(8px, -10px, 0); }
+  }
+}
+
+/* ---------- Phone: concept adapts, not stacked desktop ---------- */
+@media (max-width: 60rem) {
+  .rack-scrolls { grid-template-columns: 1fr; gap: var(--space-4); }
+  .scroll-card.lead .scroll-sheet { min-height: 14rem; }
+  .scroll-card.lead { order: -1; }
+  .read-layout { grid-template-columns: minmax(0, 1fr); }
+  .tags {
+    position: sticky;
+    top: 0;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: var(--space-2);
+    padding: var(--space-2) 0;
+    background: var(--surface-desk);
+  }
+  .tag-thread { display: none; }
+  .tag-link { white-space: nowrap; }
+  .tag-link .han { display: inline; margin-right: 0.3rem; }
+  .han-decor { display: none; }
+  .vertical-label { display: none; }
+}

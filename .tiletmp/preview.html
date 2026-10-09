@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+body{margin:0;background:#fff;font:12px sans-serif}
+h2{margin:8px 4px 4px}
+.row{display:flex;flex-wrap:wrap;gap:8px;padding:4px}
+.geo{width:432px;height:432px;outline:1px solid #ccc;background-repeat:repeat}
+.geobig{width:640px;height:640px;outline:1px solid #ccc;background-repeat:repeat;background-size:320px 320px}
+.insitu{position:relative;width:576px;height:360px;overflow:hidden;
+  background:radial-gradient(120% 120% at 50% 0%, #6b543a 0%, #4a3a27 55%, #332817 100%)}
+.lyr{position:absolute;inset:0;background-repeat:repeat;
+  -webkit-mask-repeat:repeat;mask-repeat:repeat;
+  -webkit-mask-size:var(--fs);mask-size:var(--fs)}
+.f{--fs:144px;background-color:rgba(242,231,201,.055)}
+.m{--fs:640px;background-color:rgba(233,216,176,.08)}
+.fx{--fs:144px;background-color:rgba(242,231,201,.4)}   /* 8x boosted fine */
+.mx{--fs:640px;background-color:rgba(233,216,176,.5)}   /* 6x boosted mega */
+.lbl{position:absolute;left:6px;top:4px;color:#fff;font:bold 13px sans-serif;z-index:5;text-shadow:0 0 3px #000}
+</style></head><body>
+<div class="lbl" style="position:static;color:#000;text-shadow:none">GEOMETRY (fine at 144, mega at 320=1/2 scale, 2x2 tiles)</div>
+<div class="row" id="geo"></div>
+<h2>IN SITU light desk, production alpha (left) and boosted 6-8x (right)</h2>
+<div class="row" id="sit"></div>
+<h2>DARK lacquer, production alpha and boosted</h2>
+<div class="row" id="dark"></div>
+<script>
+const T = {}; // filled by build
+</script>
+<script src="tiles.js"></script>
+<script>
+const order=['doc','viet','noi'];
+const geo=document.getElementById('geo'), sit=document.getElementById('sit'), dk=document.getElementById('dark');
+for(const t of order){
+  for(const k of ['fine','mega']){
+    const d=document.createElement('div');
+    d.className = k==='fine'?'geo':'geobig';
+    d.style.backgroundImage='url("'+T[t+'_'+k]+'")';
+    if(k==='mega') d.style.backgroundSize='320px 320px';
+    d.title=t+' '+k;
+    geo.appendChild(d);
+  }
+}
+function box(parent, t, k, boost, dark){
+  const w=document.createElement('div'); w.className='insitu';
+  if(dark) w.style.background='radial-gradient(120% 120% at 50% 0%, #1a150d 0%, #14100a 60%, #0c0a06 100%)';
+  const f=document.createElement('div');
+  f.className='lyr '+((boost?'x':'')+(k==='fine'?'f':'m'));
+  f.style.webkitMaskImage='url("'+T[t+'_'+k]+'")'; f.style.maskImage='url("'+T[t+'_'+k]+'")';
+  w.appendChild(f); parent.appendChild(w);
+}
+for(const t of order){
+  for(const k of ['fine','mega']){
+    box(sit,t,k,false,false); box(sit,t,k,true,false);
+    box(dk,t,k,false,true);   box(dk,t,k,true,true);
+  }
+}
+</script></body></html>

@@ -1,0 +1,2 @@
+{'doc_mega': {'A_ring': 26, 'B_ring': 180, 'sun_ray': 19, 'stroke_mid': 0, 'ink': 40536}, 'viet_mega': {'A_ring': 27, 'B_ring': 28, 'sun_ray': 0, 'stroke_mid': 60, 'ink': 71032}, 'noi_mega': {'A_ring': 180, 'B_ring': 17, 'sun_ray': 33, 'stroke_mid': 15, 'ink': 58260}}
+(180 = full ring present)

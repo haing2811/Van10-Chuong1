@@ -1,0 +1,526 @@
+/* styles.css — app layout layer for the "Cuộn kể chuyện" site.
+   Uses only design tokens from thu-quan-tokens.css and components from
+   thu-quan.css. No raw colors, no raw font names, no letter-spacing. */
+
+/* ---- Header ---- */
+.site-header {
+  background: var(--surface-scroll);
+  border-bottom: 1px solid var(--line-hair);
+}
+
+.header-inner {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 1.25rem var(--space-4) .5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.brand-kicker {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: .85rem;
+  color: var(--text-quiet);
+}
+
+.brand-title {
+  margin: .15rem 0 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.25;
+}
+
+.header-tools {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ---- Search input (same recipe as thu-quan .field inputs) ---- */
+#search-input {
+  min-width: min(22rem, 80vw);
+  padding: .6rem .8rem;
+  border: 1px solid var(--input-line);
+  border-radius: var(--radius-seal);
+  background: var(--input-bg);
+  color: var(--text-ink);
+  font: inherit;
+}
+#search-input::placeholder { color: var(--text-quiet); }
+
+/* ---- Search results ---- */
+.search-results {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 var(--space-4) .75rem;
+}
+
+.search-results ul {
+  list-style: none;
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  border: 1px solid var(--slip-edge);
+  border-radius: var(--radius-seal);
+  background: var(--slip-bg);
+  max-height: 16rem;
+  overflow: auto;
+}
+
+.search-results li { border-top: 1px solid var(--line-soft); }
+.search-results li:first-child { border-top: 0; }
+
+.search-results a {
+  display: block;
+  padding: .6rem .8rem;
+  color: var(--text-ink);
+  text-decoration: none;
+}
+
+.search-results a:hover,
+.search-results a:focus {
+  background: var(--tint-active);
+}
+
+.search-results .hit-src {
+  font-family: var(--font-ui);
+  font-size: .8rem;
+  color: var(--text-quiet);
+}
+
+/* ---- Tabs (btn-brush look; selected tab is seal-red) ---- */
+.tabs {
+  background: var(--surface-scroll);
+  border-top: 1px solid var(--line-hair);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.tabs-inner {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: var(--space-2) var(--space-4);
+  display: flex;
+  gap: var(--space-2);
+}
+
+.tabs [role="tab"] {
+  flex: 1;
+  max-width: 14rem;
+}
+
+.tabs [role="tab"][aria-selected="true"] {
+  background: var(--state-seal);
+  border-color: var(--state-seal);
+  color: var(--on-seal);
+}
+
+/* ---- View area ---- */
+.view {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-4) var(--space-16);
+}
+
+/* ---- Tab layout: sidebar outline + section column ---- */
+.tab-layout {
+  display: grid;
+  grid-template-columns: 14rem minmax(0, 1fr);
+  gap: var(--space-8);
+  align-items: start;
+}
+
+/* ---- Sidebar outline (active = accent bar + bold; updated on scroll) ---- */
+.side-rail {
+  position: sticky;
+  top: 4.5rem;
+  max-height: calc(100vh - 6rem);
+  overflow: auto;
+  background: var(--surface-tag);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-seal);
+  padding: var(--space-2);
+}
+
+.side-rail ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-rail li { margin: 0; }
+
+.side-rail a {
+  display: block;
+  padding: .55rem .7rem;
+  min-height: 44px;
+  border-left: 3px solid transparent;
+  color: var(--text-quiet);
+  text-decoration: none;
+  line-height: 1.4;
+  font-family: var(--font-ui);
+  font-size: .88rem;
+}
+
+.side-rail a:hover {
+  color: var(--text-ink);
+  background: var(--tint-active);
+}
+
+.side-rail a[aria-current="true"] {
+  color: var(--text-ink);
+  border-left-color: var(--state-seal);
+  background: var(--tint-active);
+  font-weight: 700;
+}
+
+/* ---- Mobile: rail becomes a sticky chip row under the tabs ---- */
+@media (max-width: 60rem) {
+  .tab-layout { display: block; }
+  .side-rail {
+    top: 4rem;
+    z-index: 15;
+    max-height: none;
+    margin-bottom: var(--space-4);
+  }
+  .side-rail ul { display: flex; gap: var(--space-1); overflow-x: auto; }
+  .side-rail li { flex: 0 0 auto; }
+  .side-rail a {
+    border-left: 0;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    padding: var(--space-1) var(--space-2);
+  }
+  .side-rail a[aria-current="true"] { border-bottom-color: var(--state-seal); }
+}
+
+/* ---- Section = one unrolled scroll card ----
+   .scroll-paper (tokens) gives the tea-stained paper + inset stains;
+   --shadow-outer adds the drop shadow on the desk; grain adds paper noise;
+   rounded ends close the sheet. */
+.card {
+  position: relative;
+  --shadow-outer: 0 var(--space-2) var(--space-8) var(--shadow-rack);
+  background-color: var(--surface-scroll);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-tag);
+  padding: var(--space-8);
+  margin: 0 0 var(--space-16);
+  scroll-margin-top: 7rem;
+}
+
+.card h2 {
+  position: relative;
+  margin: 0 0 var(--space-4);
+  padding-right: 9rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+/* Draft stamp: one per section, pinned in the header corner */
+.card > h2 .stamp-draft {
+  position: absolute;
+  top: .15rem;
+  right: 0;
+  margin-left: 0;
+  transform: rotate(-3deg);
+}
+
+.card > p:first-of-type { margin-top: 0; }
+
+/* ---- Sub-part boxes: a reader must see where one box ends ---- */
+
+/* Label strip (Khởi động, Đọc văn bản, Thần Sét …) */
+.subhead {
+  display: block;
+  margin: var(--space-8) 0 var(--space-4);
+  padding: .55rem .9rem;
+  background: var(--surface-box);
+  border-left: 3px solid var(--line-hair);
+  border-radius: 0 var(--radius-seal) var(--radius-seal) 0;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: .95rem;
+  color: var(--text-ink);
+}
+
+.card h2 + .subhead { margin-top: 0; }
+
+/* Small label inside a box (Câu hỏi, Gợi ý …) */
+.box-label {
+  display: block;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: .72rem;
+  color: var(--text-quiet);
+  margin-bottom: var(--space-1);
+}
+
+/* Question box: fresh slip, seal-red rule */
+.qa {
+  margin: var(--space-4) 0;
+  padding: var(--space-4);
+  background: var(--surface-qa);
+  border: 1px solid var(--slip-edge);
+  border-left: 3px solid var(--state-seal);
+  border-radius: var(--radius-seal);
+}
+
+.qa .q {
+  font-weight: 700;
+  margin: 0 0 var(--space-2);
+  max-width: var(--measure);
+}
+
+.qa .row {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+/* Hint box: darker tint, jade rule — distinct from the question box */
+.answer {
+  margin-top: var(--space-2);
+  padding: var(--space-2) var(--space-4) var(--space-4);
+  background: var(--surface-tag);
+  border: 1px solid var(--line-soft);
+  border-left: 4px solid var(--state-info);
+  border-radius: var(--radius-seal);
+  max-width: var(--measure);
+}
+
+.answer .lbl {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--text-quiet);
+  margin-bottom: var(--space-1);
+}
+
+/* ---- Prose ---- */
+p {
+  max-width: var(--measure);
+  margin: .6rem 0;
+}
+
+.card ul {
+  max-width: var(--measure);
+  border-left: 2px solid var(--line-soft);
+  padding-left: var(--space-4);
+  margin: var(--space-2) 0 var(--space-4);
+}
+
+.tag-src {
+  font-family: var(--font-ui);
+  font-size: .75rem;
+  color: var(--text-quiet);
+}
+
+.route-warn {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  color: var(--state-seal);
+  padding: var(--space-2) 0;
+}
+
+/* ---- Quiz box ---- */
+.quiz {
+  margin: var(--space-4) 0;
+  padding: var(--space-4);
+  background: var(--surface-qa);
+  border: 1px solid var(--slip-edge);
+  border-radius: var(--radius-seal);
+}
+
+.quiz > p { margin-top: 0; }
+
+.quiz fieldset {
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-seal);
+  margin: var(--space-2) 0;
+  padding: var(--space-2) var(--space-4) var(--space-4);
+}
+
+.quiz legend {
+  font-weight: 700;
+  padding: 0 var(--space-1);
+}
+
+.quiz label.opt {
+  display: block;
+  padding: var(--space-1) var(--space-2);
+  min-height: 44px;
+  border-radius: var(--radius-seal);
+  cursor: pointer;
+}
+
+.quiz label.opt:hover { background: var(--tint-active); }
+
+.quiz input[type="radio"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: var(--space-2);
+  vertical-align: middle;
+  accent-color: var(--state-seal);
+}
+
+.quiz .fb {
+  margin-top: var(--space-1);
+  font-family: var(--font-ui);
+  font-weight: 700;
+}
+.quiz .fb.ok { color: var(--state-info); }
+.quiz .fb.no { color: var(--state-seal); }
+
+.quiz .score {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  margin-top: var(--space-2);
+}
+
+/* ---- Exercise / builder (textareas live in .field wrappers) ---- */
+.exercise {
+  margin: var(--space-4) 0;
+  padding: var(--space-4);
+  background: var(--surface-qa);
+  border: 1px solid var(--slip-edge);
+  border-radius: var(--radius-seal);
+}
+
+.counter {
+  font-family: var(--font-ui);
+  font-size: .9rem;
+  color: var(--text-quiet);
+  margin: var(--space-1) 0;
+}
+
+/* ---- Speech tools ---- */
+.timer {
+  font-family: var(--font-ui);
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.radio-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: 44px;
+  margin-right: var(--space-4);
+  font-family: var(--font-ui);
+  cursor: pointer;
+}
+
+/* ---- Tables: ruled manuscript grid ---- */
+table.fill {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: var(--measure);
+  margin: var(--space-4) 0;
+  background: var(--surface-qa);
+  border: 1px solid var(--slip-edge);
+}
+
+table.fill th,
+table.fill td {
+  border: 1px solid var(--line-soft);
+  padding: var(--space-2);
+  vertical-align: top;
+}
+
+table.fill th {
+  background: var(--surface-box);
+  font-family: var(--font-ui);
+  font-size: .85rem;
+  text-align: left;
+}
+
+table.fill input,
+table.fill textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: .95rem;
+  color: var(--text-ink);
+  background: var(--input-bg);
+  border: 1px solid var(--input-line);
+  border-radius: var(--radius-seal);
+  padding: var(--space-1);
+}
+
+table.review td:last-child,
+table.review th:last-child {
+  white-space: nowrap;
+}
+
+/* ---- Image slots ---- */
+.img-slot {
+  border: 1px dashed var(--line-soft);
+  border-radius: var(--radius-seal);
+  padding: var(--space-4);
+  margin: var(--space-4) 0;
+  background: var(--surface-qa);
+  max-width: var(--measure);
+}
+
+.img-slot img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-seal);
+}
+
+.img-slot .ph-filename {
+  font-family: var(--font-ui);
+  font-weight: 700;
+}
+
+.img-slot .ph-brief {
+  color: var(--text-quiet);
+  font-size: .9rem;
+}
+
+/* ---- Site footer ---- */
+.site-footer {
+  max-width: 70rem;
+  margin: var(--space-4) auto var(--space-8);
+  padding: 0 var(--space-4);
+  color: var(--text-quiet);
+  font-size: .9rem;
+}
+
+/* ---- Motion: state changes only (buttons carry their own motion) ---- */
+@media (prefers-reduced-motion: no-preference) {
+  .tabs [role="tab"],
+  .side-rail a,
+  .search-results a,
+  .quiz label.opt {
+    transition:
+      background-color var(--dur-instant) var(--ease-settle),
+      border-color var(--dur-instant) var(--ease-settle),
+      color var(--dur-instant) var(--ease-settle);
+  }
+}
+
+/* ---- Phone: tighter scroll, header controls wrap ---- */
+@media (max-width: 60rem) {
+  .card {
+    padding: var(--space-4) var(--space-4) var(--space-8);
+    margin-bottom: var(--space-8);
+  }
+  .card h2 {
+    font-size: 1.25rem;
+    padding-right: 7.5rem;
+  }
+  .tabs-inner { overflow-x: auto; }
+}

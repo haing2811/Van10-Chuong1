@@ -1,0 +1,3 @@
+len 2142 has_star True has_brush False has_ray True
+viet has brush True len 1499
+hashes fb012290 a0171dc2

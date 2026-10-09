@@ -1,0 +1,489 @@
+/* thu-quan-tokens.css
+   "Thu quan co" design tokens. Three layers: primitive, semantic, component.
+   style-brief.md wins on style. Every color, font, radius, texture and
+   duration used by the site comes from this file. */
+
+:root {
+  color-scheme: light;
+
+  /* ---- Primitive: paper scale (luminous center to tea-stained edge) ---- */
+  --paper-100: #f2e7c9;
+  --paper-200: #eadfc0;
+  --paper-300: #ddcda4;
+  --paper-400: #c9b183;
+  --paper-500: #a98f5f;
+
+  /* ---- Primitive: desk scale, the room by day ---- */
+  --desk-100: #6b543a;
+  --desk-200: #4a3a27;
+  --desk-300: #332818;
+
+  /* ---- Primitive: night scale, the same room by lamplight ---- */
+  --night-100: #2a2114;
+  --night-200: #1c160d;
+  --night-300: #14100a;
+  --night-ink: #ece0c3;
+  --night-scroll: #3a2f1d;
+  --night-scroll-lit: #4a3c24;
+
+  /* ---- Primitive: ink scale ---- */
+  --ink-900: #241c12;
+  --ink-700: #2b2118;
+  --ink-500: #5a4f3d;
+  --ink-300: #8a7c64;
+
+  /* ---- Primitive: rare accents (seal red is meaningful, never ordinary) ---- */
+  --seal-600: #9c3226;
+  --seal-500: #b04432;
+  --gold-500: #a8842f;
+  --gold-300: #c8ab63;
+  --jade-700: #3f5f52;
+  --jade-300: #9dc0ae;
+  --torch-500: #e08a3c;
+
+  /* ---- Primitive: type (self-hosted faces are declared below) ----
+     All three stacks fully cover Vietnamese stacked diacritics
+     (ầ ế ề ấ ể ờ ỗ ự …); every stack ends in a generic. */
+  --font-display: "Playfair Display", "Be Vietnam Pro", "Noto Serif", Georgia, serif;
+  --font-body: "Noto Serif", "Be Vietnam Pro", Georgia, serif;
+  --font-ui: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+  --font-han: "Kaiti SC", "STKaiti", "KaiTi", "SimSun", serif;
+
+  /* ---- Primitive: space (density 3, generous, reading first) ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-8: 2rem;
+  --space-16: 4rem;
+  --measure: 65ch;
+
+  /* ---- Primitive: shape (one system: scrolls square, tags soft) ---- */
+  --radius-tag: 10px;
+  --radius-seal: 4px;
+
+  /* ---- Primitive: motion ---- */
+  --dur-instant: 120ms;
+  --dur-brush: 480ms;
+  --dur-unroll: 800ms;
+  --ease-settle: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-press: cubic-bezier(0.34, 1.4, 0.64, 1);
+
+  /* ---- Semantic: meaning, what components actually use ---- */
+  --surface-desk: var(--desk-200);
+  --surface-scroll: var(--paper-200);
+  --surface-scroll-lit: var(--paper-100);
+  --surface-tag: var(--paper-100);
+  --surface-box: var(--paper-300);
+  --surface-qa: #f7efdb;
+  --surface-scrim: rgb(36 28 18 / 0.55);
+  --text-ink: var(--ink-700);
+  --text-quiet: var(--ink-500);
+  --text-faint: var(--ink-300);
+  --line-hair: var(--gold-500);
+  --line-soft: var(--paper-400);
+  --state-seal: var(--seal-600);
+  --state-info: var(--jade-700);
+  --tint-active: rgb(156 50 38 / 0.10);
+  --on-seal: var(--paper-100);
+  --focus-ring: var(--seal-500);
+
+  /* ---- Component tokens ---- */
+  --btn-ink-bg: var(--ink-700);
+  --btn-ink-fg: var(--paper-100);
+  --btn-ghost-line: var(--gold-500);
+  --input-bg: var(--paper-100);
+  --input-line: var(--paper-500);
+  --slip-bg: var(--paper-100);
+  --slip-edge: var(--paper-400);
+  --shadow-outer: 0 0 0 rgb(20 12 4 / 0);
+
+  /* ---- Cine (torch-lit story moment, dark in both themes) ---- */
+  --surface-cine-hi: rgb(20 12 5 / 0.88);
+  --surface-cine-lo: rgb(20 12 5 / 0.94);
+  --text-cine: #f0e3c2;
+  --text-cine-soft: #e8d5a8;
+  --text-cine-bright: #f5e8c8;
+  --line-cine: #5a3c1c;
+
+  /* ---- Rack shadow, dark roller, drifting mist ---- */
+  --shadow-rack: rgb(20 12 4 / 0.5);
+  --roller-dark-hi: #3a2d18;
+  --roller-dark-lo: #0d0a06;
+  --mist-hi: rgb(230 210 170 / 0.10);
+  --mist-lo: rgb(230 210 170 / 0.08);
+
+  /* ---- Faint watermark pattern pressed into the desk ----
+     Geometry (data-URI SVG masks) lives in css/patterns.css; these are the
+     knobs: ink color per theme, layer opacity, tile density, drift timing. */
+  --pattern-ink-fine: rgb(242 231 201 / 0.055);
+  --pattern-ink-mega: rgb(233 216 176 / 0.08);
+  --pattern-opacity: 1;
+  --pattern-tile-fine: 144px;
+  --pattern-tile-mega: 640px;
+  --pattern-drift-fine: 90s;
+  --pattern-drift-mega: 120s;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-desk: var(--night-300);
+  --surface-scroll: var(--night-scroll);
+  --surface-scroll-lit: var(--night-scroll-lit);
+  --surface-tag: var(--night-100);
+  --surface-box: #241d10;
+  --surface-qa: #3f331f;
+  --surface-scrim: rgb(10 7 4 / 0.62);
+  --text-ink: var(--night-ink);
+  --text-quiet: #c9b98f;
+  --text-faint: #9a8a68;
+  --line-hair: var(--gold-300);
+  --line-soft: #5a4c30;
+  --state-seal: #d46954;
+  --state-info: var(--jade-300);
+  --tint-active: rgb(212 105 84 / 0.16);
+  --on-seal: var(--night-200);
+  --focus-ring: var(--torch-500);
+  --btn-ink-bg: var(--night-ink);
+  --btn-ink-fg: var(--night-200);
+  --btn-ghost-line: var(--gold-300);
+  --input-bg: var(--night-100);
+  --input-line: #5a4c30;
+  --slip-bg: var(--night-100);
+  --slip-edge: #5a4c30;
+  /* Lamplit desk: old-gold watermark, a touch lighter than day since the
+     lacquer desk is near-black */
+  --pattern-ink-fine: rgb(200 171 99 / 0.05);
+  --pattern-ink-mega: rgb(200 171 99 / 0.075);
+}
+
+/* ==========================================================================
+   Self-hosted fonts (downloaded by tools/fetch_fonts.py).
+   Vietnamese subset carries the stacked diacritics (U+1EA0-1EF9, the
+   horn/breve/tilde precomposed letters); latin + latin-ext complete the
+   script. font-display: swap so text paints immediately.
+   ========================================================================== */
+
+/* Be Vietnam Pro — UI, buttons, labels */
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/BeVietnamPro-400-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/BeVietnamPro-400-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/BeVietnamPro-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/BeVietnamPro-500-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/BeVietnamPro-500-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/BeVietnamPro-500-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/BeVietnamPro-700-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/BeVietnamPro-700-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/BeVietnamPro-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Noto Serif — body text */
+@font-face {
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/NotoSerif-400-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/NotoSerif-400-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/NotoSerif-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/NotoSerif-600-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/NotoSerif-600-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/NotoSerif-600-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/NotoSerif-700-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/NotoSerif-700-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/NotoSerif-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Playfair Display — headings (glyph-tested: passes the ầ ế ề ấ ể ờ ỗ ự check) */
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/PlayfairDisplay-600-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/PlayfairDisplay-600-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/PlayfairDisplay-600-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/PlayfairDisplay-700-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/PlayfairDisplay-700-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/PlayfairDisplay-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Contrast record (AA): ink on scroll about 11:1 light, 10:1 dark.
+   Quiet text on scroll about 6:1 light, 5:1 dark. Seal on scroll
+   about 5.4:1 light. Jade #3f5f52 chosen deep so info text passes.
+   Gold is hairlines only, never text. */
+
+/* ---- Base ---- */
+* { box-sizing: border-box; }
+
+html[data-fs="small"] { font-size: 15px; }
+html[data-fs="medium"] { font-size: 16px; }
+html[data-fs="large"] { font-size: 18px; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(120% 60% at 50% 0%, var(--desk-100) 0%, var(--surface-desk) 55%, var(--desk-300) 140%);
+  color: var(--text-ink);
+  font-family: var(--font-body);
+  line-height: 1.75;
+}
+
+html[data-theme="dark"] body {
+  background:
+    radial-gradient(90% 55% at 50% 12%, rgb(224 138 60 / 0.14) 0%, rgb(224 138 60 / 0) 60%),
+    radial-gradient(120% 60% at 50% 0%, var(--night-100) 0%, var(--surface-desk) 60%, #000 140%);
+}
+
+::selection { background: var(--line-hair); color: var(--ink-900); }
+html[data-theme="dark"] ::selection { color: var(--night-200); }
+
+/* ---- Paper grain utility (one tile, static, cheap) ---- */
+.grain { position: relative; }
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/><feColorMatrix type="saturate" values="0"/></filter><rect width="160" height="160" filter="url(%23n)" opacity="0.55"/></svg>');
+}
+
+/* ---- Tea-stained scroll surface ----
+   --shadow-outer lets a component add a drop shadow without losing these
+   inset stains (custom property, declared in :root above). */
+.scroll-paper {
+  background:
+    radial-gradient(115% 90% at 50% 8%, var(--surface-scroll-lit) 0%, var(--surface-scroll) 58%, var(--line-soft) 130%);
+  box-shadow:
+    var(--shadow-outer),
+    inset 0 0 60px rgb(120 90 40 / 0.18),
+    inset 0 0 8px rgb(90 65 25 / 0.22);
+}
+
+/* ---- Han ornament (decorative only, always aria-hidden in markup) ---- */
+.han {
+  font-family: var(--font-han);
+  font-weight: 400;
+}
+
+/* ---- Short vertical decorative label only, never readable content ---- */
+.vertical-label {
+  writing-mode: vertical-rl;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  color: var(--text-faint);
+}
+
+/* ---- Scrollbars belong to the world: hairline gold track, wooden knob ---- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-hair) transparent;
+}
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: var(--line-soft);
+  border: 2px solid var(--surface-desk);
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-thumb:hover { background: var(--line-hair); }
+
+/* ---- Focus is a visible ink ring, never removed ---- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* ---- Motion safety: every animation below has this alternative ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto !important; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  z-index: 99;
+  padding: 0.6rem 1rem;
+  background: var(--btn-ink-bg);
+  color: var(--btn-ink-fg);
+  font-family: var(--font-ui);
+}
+.skip-link:focus { left: 0; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}

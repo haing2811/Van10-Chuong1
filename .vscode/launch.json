@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-chrome",
+      "request": "launch",
+      "name": "Debug site",
+      "url": "http://localhost:5500/index.html",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
