@@ -44,6 +44,39 @@ input[type="range"].brush{width:14rem;accent-color:var(--state-seal)}
 .rule::after{content:"";position:absolute;left:50%;top:-5px;width:9px;height:9px;background:var(--state-seal);transform:translateX(-50%) rotate(45deg);border-radius:2px}
 .sg-head{display:flex;flex-wrap:wrap;gap:1rem;align-items:baseline;justify-content:space-between;margin-bottom:1.5rem}
 .sg-head h1{font-family:var(--font-display);font-size:clamp(2rem,5vw,3rem);margin:0;line-height:1.2}
+/* ---- Header texture section ----
+   styles.css is not loaded here, so the demo header gets a minimal
+   stand-in for its inner layout; the texture layers themselves come
+   from thu-quan.css untouched. */
+.sg-tile{background:var(--surface-scroll-lit);border:1px solid var(--line-soft);padding:.4rem;display:inline-block}
+.sg-tile img{display:block}
+.sg-tex{position:relative;width:192px;height:192px;border:1px solid var(--line-soft);background:var(--header-surface);isolation:isolate;overflow:hidden}
+.sg-tex i{position:absolute;inset:0;background-color:var(--header-pattern-ink);
+  -webkit-mask-image:var(--header-pattern-mask);mask-image:var(--header-pattern-mask);
+  -webkit-mask-size:var(--header-pattern-tile) var(--header-pattern-tile);mask-size:var(--header-pattern-tile) var(--header-pattern-tile);
+  -webkit-mask-repeat:repeat;mask-repeat:repeat;
+  opacity:var(--header-pattern-opacity);mix-blend-mode:var(--header-pattern-blend)}
+.sg-face{width:11rem;height:6rem;border:1px solid var(--line-soft);position:relative;isolation:isolate;background:var(--header-surface);overflow:hidden}
+.sg-face i{position:absolute;inset:0;background-color:var(--header-pattern-ink);
+  -webkit-mask-image:var(--header-pattern-mask);mask-image:var(--header-pattern-mask);
+  -webkit-mask-size:var(--header-pattern-tile) var(--header-pattern-tile);mask-size:var(--header-pattern-tile) var(--header-pattern-tile);
+  -webkit-mask-repeat:repeat;mask-repeat:repeat;
+  opacity:var(--header-pattern-opacity);mix-blend-mode:var(--header-pattern-blend)}
+.sg-face-day{--header-surface:var(--header-surface-day);--header-pattern-ink:var(--header-pattern-ink-day);
+  --header-pattern-opacity:var(--header-pattern-opacity-day);--header-pattern-glow:var(--header-pattern-glow-day);--header-sheen:var(--header-sheen-day)}
+.sg-face-night{--header-surface:var(--header-surface-night);--header-pattern-ink:var(--header-pattern-ink-night);
+  --header-pattern-opacity:var(--header-pattern-opacity-night);--header-pattern-glow:var(--header-pattern-glow-night);--header-sheen:var(--header-sheen-night)}
+.sg-hd{border-bottom:1px solid var(--line-hair)}
+.sg-hd .header-inner{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:flex-end;max-width:70rem;margin:0 auto;padding:1rem 1.25rem .5rem}
+.sg-hd .brand-kicker{font-family:var(--font-ui);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-quiet);margin:0 0 .2rem}
+.sg-hd .brand-title{font-family:var(--font-display);font-size:clamp(1.3rem,3vw,2rem);line-height:1.2;margin:0;color:var(--text-ink)}
+.sg-hd .header-tools{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+.sg-hd .header-tools input{font-family:var(--font-ui);font-size:.85rem;padding:.5rem .7rem;border:1px solid var(--input-line);border-radius:var(--radius-seal);background:var(--input-bg);color:var(--text-ink);min-width:13rem}
+.sg-hd .tabs{display:flex;gap:.4rem;padding:.5rem 1.25rem;border-top:1px solid var(--line-hair);max-width:70rem;margin:0 auto}
+.sg-hd .tabs [role="tab"]{font-family:var(--font-ui);font-size:.85rem;font-weight:700;padding:.45rem .9rem;border:1px solid var(--btn-ghost-line);border-radius:var(--radius-seal);background:transparent;color:var(--text-ink);cursor:pointer}
+.sg-hd .tabs [role="tab"][aria-selected="true"]{background:var(--state-seal);border-color:var(--state-seal);color:var(--on-seal)}
+/* The pinned night twin only matters while the page itself is light. */
+html[data-theme="dark"] .sg-alt{display:none}
 </style>
 </head>
 <body>
@@ -125,7 +158,7 @@ input[type="range"].brush{width:14rem;accent-color:var(--state-seal)}
     </section>
 
     <section class="sg-sec" aria-labelledby="sg-blocks">
-      <h2 id="sg-blocks">Khoi noi dung: phieu, trac nghiem, bang ke <span class="stamp-draft">Nháp - cần duyệt</span></h2>
+      <h2 id="sg-blocks">Khoi noi dung: phieu, trac nghiem, bang ke</h2>
       <div class="slip" id="sg-slip">
         <span class="lbl">Goi y tham khao</span>
         <p class="type-b">Hai con nguoi doi lap ve vi the lai gap nhau o long yeu cai dep va trong nguoi tai. Do la tinh huong treo tre ma dac sac.</p>
@@ -184,6 +217,80 @@ input[type="range"].brush{width:14rem;accent-color:var(--state-seal)}
         <div class="slip-fold" id="m-fold"><div><div class="slip"><span class="lbl">Phieu an</span><p class="type-b">Mieng giay duoc rut ra va mo phang, khong phai bat tat dot ngot.</p></div></div></div>
       </div>
     </section>
+
+    <section class="sg-sec" aria-labelledby="sg-hdr">
+      <h2 id="sg-hdr">Van kep tren dau trang (header texture)</h2>
+      <p class="lead">Lop hoi van kep mach cheo an vao day dau trang, doi mau cong voi nut Dem/Sang qua 800ms. Van chi dung lam nen, khong dat duoi doan van dai; o dien thoai gach to hon va nhe hon. Doan chu, o tim kiem, nut va the tab van giu nguong WCAG AA ca o hai che do.</p>
+      <div class="demo-row">
+        <figure class="sg-tile" style="margin:0">
+          <img src="images/header-pattern.svg" width="64" height="64" alt="The gach men 64 x 64, file SVG goc">
+          <figcaption class="type-u" style="margin:.3rem 0 0">SVG goc 64px</figcaption>
+        </figure>
+        <div>
+          <div class="sg-tex" aria-hidden="true"><i></i></div>
+          <p class="type-u" style="margin:.3rem 0 0">Lat 3x3, khong seam</p>
+        </div>
+        <div>
+          <div class="sg-face sg-face-day" aria-hidden="true"><i></i></div>
+          <p class="type-u" style="margin:.3rem 0 0">Nen sang: muc tra nhe tren giay</p>
+        </div>
+        <div>
+          <div class="sg-face sg-face-night" aria-hidden="true"><i></i></div>
+          <p class="type-u" style="margin:.3rem 0 0">Nen dem: vang que tren son</p>
+        </div>
+        <button type="button" class="btn-brush" id="sg-hdr-toggle">Doi sang dem</button>
+      </div>
+      <p class="type-u">Header mau (theo che do hien tai cua trang):</p>
+      <div class="sg-hd">
+        <div class="header-texture" aria-hidden="true"><div class="header-tex-ink"></div></div>
+        <div class="header-sheen" aria-hidden="true"></div>
+        <div class="header-inner">
+          <div class="brand">
+            <p class="brand-kicker">Ngu van 10 - Tap 1 - Bai 1</p>
+            <p class="brand-title">Suc hap dan cua truyen ke</p>
+          </div>
+          <div class="header-tools" role="search">
+            <input id="sg-hd-q" type="search" aria-label="Tim kiem mau" placeholder="Tim kiem: than thoai, Huan Cao,...">
+            <div class="desk-tools" role="group" aria-label="Mau nut hien thi">
+              <button type="button" aria-label="Giam co chu">A-</button>
+              <button type="button" aria-label="Tang co chu">A+</button>
+              <button type="button" aria-label="Chuyen che do sang toi">Toi</button>
+            </div>
+          </div>
+        </div>
+        <nav class="tabs" aria-label="Mau ba phan mon">
+          <button type="button" role="tab" aria-selected="true">Doc</button>
+          <button type="button" role="tab" aria-selected="false">Viet</button>
+          <button type="button" role="tab" aria-selected="false">Noi va nghe</button>
+        </nav>
+      </div>
+      <div class="sg-alt" data-theme="dark">
+        <p class="type-u" style="margin-top:1rem">Cung header tren nen dem, mac dinh co dinh de so sanh khi trang dang sang:</p>
+        <div class="sg-hd">
+          <div class="header-texture" aria-hidden="true"><div class="header-tex-ink"></div></div>
+          <div class="header-sheen" aria-hidden="true"></div>
+          <div class="header-inner">
+            <div class="brand">
+              <p class="brand-kicker">Ngu van 10 - Tap 1 - Bai 1</p>
+              <p class="brand-title">Suc hap dan cua truyen ke</p>
+            </div>
+            <div class="header-tools" role="search">
+              <input type="search" aria-label="Tim kiem mau" placeholder="Tim kiem: than thoai, Huan Cao,...">
+              <div class="desk-tools" role="group" aria-label="Mau nut hien thi">
+                <button type="button" aria-label="Giam co chu">A-</button>
+                <button type="button" aria-label="Tang co chu">A+</button>
+                <button type="button" aria-label="Chuyen che do sang toi">Toi</button>
+              </div>
+            </div>
+          </div>
+          <nav class="tabs" aria-label="Mau ba phan mon">
+            <button type="button" role="tab" aria-selected="true">Doc</button>
+            <button type="button" role="tab" aria-selected="false">Viet</button>
+            <button type="button" role="tab" aria-selected="false">Noi va nghe</button>
+          </nav>
+        </div>
+      </div>
+    </section>
   </div>
 </div>
 
@@ -201,17 +308,20 @@ input[type="range"].brush{width:14rem;accent-color:var(--state-seal)}
   "use strict";
   var root = document.documentElement;
   var lamp = document.getElementById("sg-lamp");
+  var hdrToggle = document.getElementById("sg-hdr-toggle");
   function syncLamp() {
     var dark = root.getAttribute("data-theme") === "dark";
     lamp.textContent = dark ? "Sang" : "Dem";
     lamp.setAttribute("aria-pressed", String(dark));
+    hdrToggle.textContent = dark ? "Doi dem sang" : "Doi sang dem";
   }
   syncLamp();
-  lamp.addEventListener("click", function () {
-    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    root.setAttribute("data-theme", next);
+  function flipTheme() {
+    root.setAttribute("data-theme", root.getAttribute("data-theme") === "dark" ? "light" : "dark");
     syncLamp();
-  });
+  }
+  lamp.addEventListener("click", flipTheme);
+  hdrToggle.addEventListener("click", flipTheme);
   var order = ["small", "medium", "large"];
   document.getElementById("sg-inc").addEventListener("click", function () {
     var i = Math.min(order.length - 1, order.indexOf(root.getAttribute("data-fs")) + 1);

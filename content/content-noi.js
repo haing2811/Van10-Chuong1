@@ -94,11 +94,11 @@ window.CONTENT.noi = [
   blocks: [
     {type: "p", source: "outline", text: "TÓM TẮT QUY TRÌNH"},
     {type: "list", source: "outline", items: [
-      "Chuẩn bị nói: chọn đề tài, tìm ý, sắp xếp ý, chọn luận điểm và dẫn chứng, xác định từ ngữ then chốt.",
-      "Chuẩn bị nghe: tìm hiểu tác phẩm, tìm hiểu thể loại, hình thành cảm nhận ban đầu.",
-      "Thực hành nói: mở đầu, triển khai, kết luận.",
-      "Thực hành nghe: lắng nghe, ghi nhận ý chính, nhận xét, đặt câu hỏi.",
-      "Trao đổi: nhận xét, hỏi và góp ý, trả lời, giải thích và phản hồi, tôn trọng các quan điểm khác nhau."
+      "Chuẩn bị nói: chọn đề tài → tìm ý → sắp xếp ý → chọn luận điểm và dẫn chứng → xác định từ ngữ then chốt.",
+      "Chuẩn bị nghe: tìm hiểu tác phẩm → tìm hiểu thể loại → hình thành cảm nhận ban đầu.",
+      "Thực hành nói: mở đầu → triển khai → kết luận.",
+      "Thực hành nghe: lắng nghe → ghi nhận ý chính → nhận xét → đặt câu hỏi.",
+      "Trao đổi: nhận xét, hỏi và góp ý → trả lời, giải thích và phản hồi → tôn trọng các quan điểm khác nhau."
     ]}
   ]
 },
@@ -107,7 +107,6 @@ window.CONTENT.noi = [
   title: "Bảng tự đánh giá bài nói (6 tiêu chí)",
   source: "draft",
   blocks: [
-    {type: "p", source: "draft", text: "Bảng 6 tiêu chí chép nguyên văn từ SGK tr. 36. Mục này chưa có trong outline."},
     {type: "reviewtable", source: "draft", id: "noi-tudanhgia", title: "Tự đánh giá bài nói (Đạt / Chưa đạt, có lưu)", criteria: [
       "Bài trình bày chọn được tác phẩm truyện phù hợp với những yêu cầu về thể loại, có khả năng gợi được hứng thú cho người nghe",
       "Bài trình bày có đủ ba phần: Mở đầu, Triển khai, Kết luận",
@@ -123,7 +122,6 @@ window.CONTENT.noi = [
   title: "Dàn bài nói mẫu về Chữ người tử tù (5 phút)",
   source: "draft",
   blocks: [
-    {type: "p", source: "draft", text: "Dàn bài mẫu chưa có trong outline. Khung 3 phần dưới đây dùng nội dung Văn bản 5 (tab Đọc) và chờ duyệt."},
     {type: "list", source: "draft", items: [
       "Mở đầu (1 phút): giới thiệu truyện Chữ người tử tù của Nguyễn Tuân và vấn đề trình bày (tình huống truyện đặc sắc, cảnh cho chữ). Nêu lí do chọn tác phẩm.",
       "Triển khai (3 phút): luận điểm 1 - tình huống trớ trêu mà đặc sắc; luận điểm 2 - vẻ đẹp Huấn Cao và quản ngục; luận điểm 3 - cảnh cho chữ xưa nay chưa từng có. Mỗi luận điểm kèm một dẫn chứng.",

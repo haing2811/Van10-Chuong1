@@ -111,7 +111,9 @@ html[data-tab="noi"] .bg-layer[data-layer="noi"] {
 @supports (animation-timeline: scroll()) {
   @media (prefers-reduced-motion: no-preference) {
     .bg-layer {
-      animation: bg-parallax linear both;
+      /* 1ms duration: the scroll timeline drives progress anyway, but a 0s
+         duration makes some engines skip the animation entirely. */
+      animation: bg-parallax 1ms linear both;
       animation-timeline: scroll(root block);
     }
     @keyframes bg-parallax {

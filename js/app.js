@@ -10,14 +10,8 @@
 
   function esc(s) { return String(s === null || s === undefined ? "" : s); }
 
-  // Exactly one stamp per top-level section, driven by data-source="draft".
-  function draftStamp() {
-    var c = document.createElement("span");
-    c.className = "stamp-draft";
-    c.textContent = "Nháp - cần duyệt";
-    return c;
-  }
-
+  // Sections still carry data-source="draft" (invisible metadata); the
+  // visible "Nháp - cần duyệt" stamp was removed once design was approved.
   function sectionIsDraft(s) {
     return s.source === "draft" ||
       (s.blocks || []).some(function (b) { return b.source === "draft"; });
@@ -108,7 +102,6 @@
     var h2 = document.createElement("h2");
     h2.id = "h-" + s.id;
     h2.textContent = s.title;
-    if (isDraft) h2.appendChild(draftStamp());
     card.appendChild(h2);
     (s.blocks || []).forEach(function (b) {
       try { card.appendChild(renderBlock(b)); }
@@ -121,7 +114,7 @@
     var back = document.createElement("p");
     var toplink = document.createElement("a");
     toplink.href = "#" + tabKey + "/" + s.id;
-    toplink.textContent = "Liên kết tới mục này";
+    toplink.textContent = "Kéo lên đầu phần";
     toplink.className = "tag-src";
     back.appendChild(toplink);
     card.appendChild(back);

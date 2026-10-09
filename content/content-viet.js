@@ -5,7 +5,6 @@ window.CONTENT.viet = [
   title: "Giới thiệu kiểu bài (khi nào dùng)",
   source: "draft",
   blocks: [
-    {type: "p", source: "draft", text: "Mục này chưa có trong outline. Đoạn giới thiệu dưới đây tóm ý SGK tr. 29."},
     {type: "p", source: "draft", text: "Trước một tác phẩm truyện, mỗi người đọc có thể có những cảm nhận, quan điểm riêng biệt. Khi cần chia sẻ những cảm nhận, quan điểm đó, chúng ta có thể sử dụng kiểu bài nghị luận phân tích, đánh giá một tác phẩm truyện. Ở dạng bài viết này, bạn cần làm rõ chủ đề của truyện là gì, truyện có những nét đặc sắc nào về hình thức nghệ thuật. Để việc giải đáp các vấn đề đó có sức thuyết phục, bạn hãy chú ý vận dụng những kiến thức về thể loại đã được học trong phần Tri thức ngữ văn."}
   ]
 },
@@ -36,7 +35,7 @@ window.CONTENT.viet = [
   title: "Bài viết tham khảo: Quà Giáng sinh (O. Hen-ry)",
   source: "draft",
   blocks: [
-    {type: "p", source: "draft", text: "Bài tham khảo chưa có trong outline. Các ý dưới đây chép từ SGK tr. 30-32: Giá trị hay là sự vô giá của quà tặng trong truyện ngắn Quà Giáng sinh của O. Hen-ry (O. Henry), tác giả Linh Nguyễn (theo tạp chí Văn học và Tuổi trẻ, số tháng 10/2020, tr. 11-14). Truyện gốc nhan đề The Gift of the Magi, đăng báo lần đầu tháng 12 năm 1905, in sách trong tuyển tập năm 1906."},
+    {type: "p", source: "draft", text: "Quà Giáng sinh của O. Hen-ry (O. Henry), tác giả Linh Nguyễn (theo tạp chí Văn học và Tuổi trẻ, số tháng 10/2020, tr. 11-14). Truyện gốc nhan đề The Gift of the Magi, đăng báo lần đầu tháng 12 năm 1905, in sách trong tuyển tập năm 1906."},
     {type: "img", source: "draft", file: "viet-qua-giang-sinh.jpg"},
     {type: "h3", source: "draft", text: "Bố cục bài và chức năng từng đoạn"},
     {type: "list", source: "draft", items: [
@@ -74,6 +73,15 @@ window.CONTENT.viet = [
       "Lập dàn ý: tìm các thông tin đưa vào bài",
       "Viết bài",
       "Chỉnh sửa"
+    ]},
+    {type: "h3", source: "outline", text: "Dàn ý"},
+    {type: "list", source: "outline", items: [
+      "Giới thiệu ngắn gọn về tác phẩm truyện (nhan đề, tên tác giả,...) và ý kiến khái quát của người viết về tác phẩm",
+      "Tóm tắt tác phẩm truyện (vừa đủ để người đọc nắm được nội dung chính)",
+      "Phân tích cụ thể, rõ ràng về tác phẩm truyện (chủ đề, nét đặc sắc về hình thức nghệ thuật và tác dụng của chúng) và những cứ liệu sinh động",
+      "Khái quát lại nội dung văn bản",
+      "Đánh giá về tác phẩm truyện dựa trên các lí lẽ và bằng chứng thuyết phục",
+      "Khẳng định giá trị của tác phẩm truyện"
     ]},
     {type: "h3", source: "outline", text: "Chuẩn bị viết"},
     {type: "list", source: "outline", items: [
@@ -121,7 +129,6 @@ window.CONTENT.viet = [
   title: "Dàn ý mẫu cho Chữ người tử tù",
   source: "draft",
   blocks: [
-    {type: "p", source: "draft", text: "Dàn ý mẫu chưa có trong outline. Khung dưới đây bám theo skeleton (mở bài, thân bài gồm tóm tắt, nghệ thuật, chủ đề, kết bài) và chờ đối chiếu SGK."},
     {type: "outlinebuilder", source: "draft", id: "viet-builder-tutu", title: "Công cụ lập dàn ý (mở bài, thân bài, kết bài)", fields: [
       {key: "mobai", label: "Mở bài: giới thiệu tác phẩm và ý kiến khái quát", hint: "Nhan đề, tác giả Nguyễn Tuân, lí do chọn truyện..."},
       {key: "thanbai", label: "Thân bài: tóm tắt, phân tích nghệ thuật, phân tích chủ đề", hint: "Mỗi ý kèm dẫn chứng từ truyện..."},

@@ -18,6 +18,8 @@
 </div>
 <a class="skip-link" href="#view">Bỏ qua tới nội dung chính</a>
 <header class="site-header">
+  <div class="header-texture" aria-hidden="true"><div class="header-tex-ink"></div></div>
+  <div class="header-sheen" aria-hidden="true"></div>
   <div class="header-inner">
     <div class="brand">
       <p class="brand-kicker">Ngữ văn 10 - Tập 1 - Bài 1</p>
@@ -25,7 +27,7 @@
     </div>
     <div class="header-tools" role="search">
       <label class="visually-hidden" for="search-input">Tìm kiếm toàn bộ nội dung</label>
-      <input id="search-input" type="search" placeholder="Tìm kiếm: thần thoại, Huấn Cao, Hán Việt..." autocomplete="off">
+      <input id="search-input" type="search" placeholder="Tìm kiếm: thần thoại, Huấn Cao, ..." autocomplete="off">
       <div class="desk-tools" role="group" aria-label="Tùy chỉnh hiển thị">
         <button type="button" id="btn-fs-down" aria-label="Giảm cỡ chữ">A-</button>
         <button type="button" id="btn-fs-up" aria-label="Tăng cỡ chữ">A+</button>
@@ -49,6 +51,19 @@
 <script src="content/content-viet.js"></script>
 <script src="content/content-noi.js"></script>
 <script src="js/storage.js"></script>
+<script>
+/* First visit: follow the system day/night choice; Store wraps localStorage
+   in try/catch, so this works even when storage is blocked (memory fallback).
+   Later visits read the stored choice. app.js initDisplay() re-reads the same
+   value afterwards — no conflict. */
+(function () {
+  if (!window.Store) return;
+  if (Store.get("theme", null) === null) {
+    Store.set("theme", window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  }
+  document.documentElement.setAttribute("data-theme", Store.get("theme", "light"));
+})();
+</script>
 <script src="js/quiz.js"></script>
 <script src="js/activities.js"></script>
 <script src="js/search.js"></script>

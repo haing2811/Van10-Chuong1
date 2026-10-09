@@ -472,6 +472,99 @@ table.ruled td {
   }
 }
 
+/* ---------- Header texture: key-fret lattice pressed into the top band ----------
+   Two decorative layers sit inside .site-header and paint BELOW its content:
+   .header-texture (the wrapper carries the glow filter + soft-light blend;
+   its child .header-tex-ink carries the mask + ink fill — the filter must
+   live on the parent, because filter applies before mask on an element, so
+   drop-shadow on the masked element itself would glow a filled rectangle
+   instead of the lattice lines) and .header-sheen (a slow light band,
+   transform only). ::after fades the pattern out at the bottom edge.
+   Geometry, color and duration all come from tokens
+   (css/thu-quan-tokens.css); images/header-pattern.svg is the authored
+   source of the mask, mirrored into a data URI so file:// works. */
+.site-header {
+  position: relative; /* anchor the decorative layers */
+  z-index: 21;         /* stacking context: keeps the -z layers above the
+                          header's own background, below its content */
+}
+/* Specificity beats styles.css's .site-header background shorthand.
+   Deliberately no transition here: --header-surface is a registered
+   @property already tweening on html, and a second driver on the consumer
+   would lag behind it. */
+html .site-header {
+  background-color: var(--header-surface);
+}
+.header-texture {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  filter: var(--header-pattern-glow);
+  mix-blend-mode: var(--header-pattern-blend);
+  transition: filter var(--dur-theme) var(--ease-settle);
+}
+.header-tex-ink {
+  position: absolute;
+  inset: 0;
+  /* Phone multiplier keeps the registered var on html as the single smooth
+     tween driver; overriding the registered var locally would snap. */
+  opacity: calc(var(--header-pattern-opacity) * var(--header-pattern-opacity-phone, 1));
+}
+@supports ((mask-image: url("x")) or (-webkit-mask-image: url("x"))) {
+  /* Guarded: without mask support this layer stays empty rather than
+     flooding the header with solid ink. */
+  .header-tex-ink {
+    background-color: var(--header-pattern-ink);
+    -webkit-mask-image: var(--header-pattern-mask);
+    mask-image: var(--header-pattern-mask);
+    -webkit-mask-size: var(--header-pattern-tile) var(--header-pattern-tile);
+    mask-size: var(--header-pattern-tile) var(--header-pattern-tile);
+    -webkit-mask-repeat: repeat;
+    mask-repeat: repeat;
+  }
+}
+.site-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg,
+      transparent 0%, transparent 55%, var(--header-surface) 100%);
+}
+/* Tabs ride on the bare texture: styles.css gives the strip an opaque
+   background, this is specific enough to win without !important. */
+html .site-header .tabs {
+  background-color: transparent;
+}
+.header-sheen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -40%;
+  width: 40%;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(105deg,
+      transparent 0%, var(--header-sheen) 50%, transparent 100%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .header-sheen {
+    animation: header-sheen-drift 28s linear infinite;
+  }
+  @keyframes header-sheen-drift {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(350%, 0, 0); }
+  }
+}
+@media (max-width: 60rem) {
+  .site-header {
+    --header-pattern-tile: 88px;
+    --header-pattern-opacity-phone: 0.62;
+  }
+}
+
 /* ---------- Phone: concept adapts, not stacked desktop ---------- */
 @media (max-width: 60rem) {
   .rack-scrolls { grid-template-columns: 1fr; gap: var(--space-4); }

@@ -1,28 +1,161 @@
-	
-Đọc
 VĂN BẢN 1, 2, 3: TRUYỆN VỀ CÁC VỊ THẦN SÁNG TẠO THẾ GIỚI
-Truyện thần thoại
+TRUYỆN THẦN THOẠI
 Truyện kể về các vị thần hoặc con người có sức mạnh phi thường, là phương pháp người xưa dùng để giải thích thế giới. 
-Một số đặc trưng:
-Cốt truyện đơn giản, đơn tuyến, tổng hợp lại thành “hệ thần thoại”.
-Không gian rộng lớn, vô tận, thường không xác định địa danh, 
-Thời gian phiếm chỉ, mang tính ước lệ.
-Những nhân vật đề có tính phi thường, siêu nhiên, từ thần linh đến con người và cỏ cây, sự vật phản ánh tư duy vạn vật hữu linh của người xưa. 
-Tác phẩm mang tính cộng đồng, được truyền miệng từ thế hệ này sang thế hệ khác. Tác giả vô danh, truyện được bồi đắp thêm theo thời gian. 
-
+Hai loại:
+Thần thoại suy nguyên: Lý giải về sự hình thành của thế giới tự nhiên cũng như nguồn gốc của con người và vạn vật, với nhân vật chính là các vị thần sáng tạo thế giới.
+Thần thoại sáng tạo: Nhân vật chính ở thể loại này chính là các anh hùng thần thoại, với các kỳ tích phản ánh được vẻ văn hóa của từng cộng đồng.
 
 THẦN TRỤ TRỜI
 Cốt truyện, tóm tắt theo sự kiện chính
-Một vị thần từ mớ hỗn độn của vũ trụ trong một khoảng thời gian không xác định  bỗng dưng đứng dậy dùng đầu đội trời lên rồi đào đất, đá đắp thành một cái cột để chống trời. 
+Một vị thần từ mớ hỗn độn của vũ trụ trong một khoảng thời gian không xác định  bỗng dưng đứng dậy dùng đầu đội trời lên rồi đào đất, đá đắp thành một cái cột để chống trời. Sau khi trời đất khô cứng, thần phá cột; những mảnh vụn trở thành đồ núi và nơi thần xúc đất đắp cột trở thành biển cả. 
 Nhân vật thần đắp cột
 Ngoại hình: thân thể to lớn không biết bao nhiêu mà kể, vóc dáng hùng vĩ, kỳ lạ.
 Hành động: xúc đất từ biển đắp cột trụ trời, phá cột sau khi trời khô. 
 Tính cách: qua việc thần cần cù đắp cột, ta thấy tính chăm chỉ. Do hành động xây cột, nâng trời không có lý do rõ ràng, thần cũng huyền bí và khó hiểu. 
 => Truyện nhằm giải thích nguồn gốc trời đất và cảnh vật thiên nhiên như núi và biển. Vị thần huyền bí đại diện cho ước mơ chinh phục, lý giải thiên nhiên và ca ngợi sức mạnh lao động, vóc dáng vĩ đại của con người thời cổ đại.
-THẦN SÉT
+2. THẦN SÉT
 Cốt truyện, tóm tắt theo sự kiện chính
-SK1: Sau khi giới thiệu nhân vật và công việc của thần Sét 
-THẦN GIÓ
+Thần Sét phản ánh sự phẫn nộ của Ngọc Hoàng, đóng vai trò xử án. Thần thường ngủ về mùa đông, vào khoảng tháng Hai, tháng Ba mới lại dậy làm việc. Thần rất nóng nảy, có khi gây chết oan; có lần Ngọc Hoàng phạt vì đánh chết người vô tội, thần bị bắt ngồi yên với con gà của Ngọc Hoàng, thỉnh thoảng bị mổ một cái mà không làm gì được. Từ đấy thần có tính giật mình khi nghe tiếng gà. Truyện còn nêu tên Cường Bạo Đại vương, người từng hơn thua thắng thần Sét dù vẫn bị đánh chết. 
+Nhân vật thần Sét
+Ngoại hình: mặt mũi rất nanh ác, có một lưỡi búa đá.
+Hành động: Khi thấy người, vật, hay cây cỏ làm điều xấu, thần tự mình nhảy xuống tận nơi, trỏ ngọn cờ vào đầu tội nhân rồi bổ lưỡi búa xuống.
+Tính cách: rất nóng nảy, có khi gây chết oan.
+=> Nhằm giải thích tại sao mỗi lần chớp rạch, biết có sét, cũng như tại sao có người không làm gì cũng bị sét đánh. Ngoài ra còn mang tính an ủi, đưa ra ý tưởng rằng người vô tội bị đánh chết thì cả thần linh cũng sẽ bị phạt. 
+3. THẦN GIÓ
+Cốt truyện, tóm tắt theo sự kiện chính
+Thần Gió có hình dạng không đầu, sở hữu chiếc quạt thần giúp làm ra gió bão theo lệnh Ngọc Hoàng. Một hôm thần đi vắng, đứa con nhỏ nghịch ngợm lấy quạt ra chơi, vô tình làm văng bát gạo của một người nghèo xuống ao. Người này tức giận lên Thiên đình kiện. Ngọc Hoàng trách phạt, đày con thần Gió xuống trần chăn trâu và hóa thành cây ngải gió để báo hiệu thời tiết cho con người.
+Nhân vật thần Gió
+Ngoại hình: thần Gió có một hình dáng kì quặc. Thần Gió không có đầu.
+Hành động: Tạo ra gió nhỏ hay bão lớn tùy theo mệnh lệnh của Ngọc Hoàng.
+Tính cách: thần Gió phần vâng lời và có trách nhiệm, tuân theo mệnh lệnh của Ngọc Hoàng. Thỉnh thoảng thần thích xuống hạ giới đi chơi vào buổi tối, tạo ra những trận gió xoay bất chợt, thể hiện tính thất thường và khó lường của thiên tai. 
+=> Truyện giải thích nguồn gốc, tính chất của gió và hiện tượng gió xoáy ở đồng bằng, cũng như giải thích sự xuất hiện của cây ngải gió. Truyện còn phản ánh kinh nghiệm thực tế của người xưa trong việc nhận biết sự thay đổi thời tiết và cách sử dụng lá cây ngải gió để chữa bệnh cảm gió cho trâu bò.
+
+ĐẶC SẮC NGHỆ THUẬT
+Xây dựng nhân vật
+Nhân vật trong truyện thần thoại thường là các vị thần, những người anh hùng hoặc nhân vật có nguồn gốc và sức mạnh phi thường.
+Nhân vật được xây dựng với những đặc điểm vượt xa khả năng của con người bình thường như sức mạnh to lớn, khả năng điều khiển thiên nhiên và thực hiện những công việc mà con người không thể làm được.
+Qua hành động và chiến công của nhân vật, người xưa thể hiện khát vọng chinh phục, cải tạo thiên nhiên và xây dựng cuộc sống tốt đẹp hơn.
+Nhân vật thần thoại thường mang tính biểu tượng, đại diện cho sức mạnh, ước mơ hoặc cách nhìn của cộng đồng đối với thế giới.
+Yếu tố kỳ ảo, hoang đường
+Các yếu tố kì ảo có thể thể hiện qua các vị thần với những năng lực siêu nhiên, những hành động có quy mô lớn lao, vượt khỏi giới hạn của con người, sự biến đổi bất thường của thiên nhiên, và những sự việc bất khả thi ngoài đời thật. 
+Tác dụng:
+Tạo nên màu sắc huyền bí, hấp dẫn cho câu chuyện.
+Thể hiện trí tưởng tượng phong phú của người xưa và giúp con người thời cổ đại lí giải những hiện tượng tự nhiên mà họ chưa thể giải thích bằng khoa học.
+Làm nổi bật tầm vóc phi thường của nhân vật.
+Thể hiện ước mơ và khát vọng của con người trước thiên nhiên.
+Cốt truyện
+Cốt truyện thường đơn giản, ngắn gọn, tập trung vào một hoặc một số sự kiện quan trọng. Các loại thần thoại sẽ có những sự kiện chính, nội dung khác nhau. 
+Tác dụng: giúp câu chuyện dễ nhớ, dễ truyền miệng và làm nổi bật ý nghĩa mà người xưa muốn gửi gắm.
+Không gian, thời gian nghệ thuật
+Thời gian thường là thời gian xa xưa, thời gian khởi nguyên, khi thế giới còn đang được hình thành.
+Không gian thường là không gian rộng lớn như trời và đất, núi rừng, biển cả, sông ngòi, vũ trụ, …
+Không gian và thời gian thường không xác định cụ thể, phiếm chỉ. 
+Tác dụng: tạo cảm giác thiêng liêng, huyền thoại và làm cho những sự kiện trong truyện mang tầm vóc lớn lao.
+Nghệ thuật phóng đại, cường điệu
+Những khả năng và hành động của nhân vật thường được phóng đại đến mức phi thường. Một nhân vật có thể tạo ra núi non, sông biển, thay đổi đất trời hoặc chiến đấu với những thế lực khổng lồ.
+Tác dụng: Làm nổi bật sức mạnh của nhân vật, thể hiện sự ngưỡng mộ của con người cổ đại đối với những lực lượng có khả năng tác động đến tự nhiên, thể hiện ước mơ về sức mạnh và khả năng làm chủ thế giới.
+Cách lý giải thế giới theo tư duy thần thoại
+Người xưa chưa có điều kiện giải thích thế giới bằng khoa học nên thường dùng trí tưởng tượng và tư duy thần thoại. Các hiện tượng tự nhiên được giải thích thông qua hành động hoặc sức mạnh của thần linh. Đây chính là nét đặc trưng quan trọng giúp phân biệt thần thoại với nhiều thể loại tự sự khác.
+
+NỘI DUNG VÀ CHỦ ĐỀ
+Nội dung
+Lý giải nguồn gốc thế giới và các hiện tượng tự nhiên: Những câu trả lời này chưa dựa trên khoa học mà dựa trên trí tưởng tượng và niềm tin vào các lực lượng siêu nhiên.
+Qua đó, thần thoại cho thấy nhận thức còn hồn nhiên, chất phác nhưng giàu trí tưởng tượng của con người thời cổ đại.
+Thể hiện khát vọng chinh phục thiên nhiên: Thiên nhiên đối với con người thời cổ đại vừa gần gũi vừa đầy sức mạnh và nguy hiểm, vì vậy, con người tưởng tượng ra những vị thần hoặc người anh hùng có sức mạnh phi thường. Sức mạnh đó thường để tạo lập thế giới, chống lại thế lực nguy hiểm và mang lại cuộc sống ổn định cho con người.
+Điều này thể hiện khát vọng làm chủ thiên nhiên và cuộc sống của con người.
+Ca ngợi sức mạnh và trí tuệ của con người: Mặc dù nhân vật thường mang màu sắc thần linh, đằng sau những hình tượng ấy vẫn là ước mơ của con người. Những mong ước như có sức mạnh to lớn và quyền lực để tự chủ trong đời sống là sự lý tưởng hóa sức mạnh và khát vọng của cộng đồng.
+Thể hiện trí tưởng tượng phong phú của người xưa: Thông qua những câu chuyện về thần linh, người khổng lồ, những chiến công phi thường…, ta thấy người xưa có khả năng tưởng tượng rất mạnh mẽ.
+Chủ đề
+Truyện thần thoại thể hiện cách con người thời cổ đại nhận thức, lý giải về nguồn gốc thế giới, thiên nhiên và con người bằng trí tưởng tượng; đồng thời thể hiện khát vọng khám phá, chinh phục và làm chủ thiên nhiên, cùng niềm tin vào sức mạnh của con người.
+
+VĂN BẢN 4: TẢN VIÊN PHÁN SỰ LỤC
+Tác giả, tác phẩm
+Tác giả
+Nguyễn Dữ, sinh vào khoảng đầu thế kỉ XVI và năm mất không rõ, là một nhà văn nổi tiếng của văn học Việt Nam thế kỉ XVI. Ông quê quán ở làng Đỗ Tùng, huyện Trường Tân, phủ Hạ Hồng, trấn Hải Dương, nay thuộc khu vực huyện Thanh Miện, tỉnh Hải Dương.
+Nguyễn Dữ xuất thân trong một gia đình có truyền thống Nho học, có vốn kiến thức Hán học sâu rộng, am hiểu kinh điển Nho gia và văn chương. Nguyễn Dữ từng đi thi và đỗ Hương tiến rồi lên làm quan, nhưng do tình hình chính trị và một số yếu tố khác không giữ chức lâu. 
+Nguyễn Dữ được cho là đã từ quan về ở ẩn, lấy việc đọc sách, viết văn và giữ gìn phẩm cách làm chính, sống tương đối ẩn dật.
+
+
+Tác phẩm
+Thể loại: văn xuôi tự sự thời trung đại. Truyền kỳ thường được sử dụng để phản ánh hiện thực thông qua các yếu tố li kì, hoang đường.
+Giá trị nội dung: thông qua hình tượng của nhân vật Ngô Tử Văn và hồn ma của tên giặc ngoại xâm, tác giả đã thành công ca ngợi sự chính nghĩa cũng như sự kiên quyết diệt trừ kẻ xấu của con người.
+Truyền kỳ mạn lục:
+Viết bằng chữ Hán.
+Là tập truyện truyền kỳ gồm 20 truyện.
+Được xem là tác phẩm tiêu biểu của văn xuôi tự sự trung đại Việt Nam.
+Tác phẩm được viết dựa trên chất liệu từ những câu chuyện dân gian, truyền thuyết, lịch sử và đời sống, nhưng Nguyễn Dữ đã sáng tạo, tổ chức lại thành những truyện có giá trị tư tưởng và nghệ thuật sâu sắc.
+
+Tình huống truyện
+Tử Văn vốn là người cương trực, khẳng khái, thấy hồn ma tướng giặc chiếm đền và tác oai tác quái nên đã đốt đền để trừ hại cho dân.
+Sau khi chết, tên tướng giặc kiện Tử Văn xuống âm phủ, khiến chàng phải đối mặt với Diêm Vương và đứng trước nguy cơ bị trừng phạt.
+Tử Văn dũng cảm vạch trần sự gian trá của hồn ma tướng giặc, cuối cùng sự thật được làm sáng tỏ và kẻ ác bị trừng trị.
+
+Tóm tắt
+Phần 1: Từ đầu đến “không cần gì cả” - Ngô Tử Văn đốt đền
+Ngô Tử Văn tên là Soạn, quê ở huyện Yên Dũng, đất Lạng Giang. Chàng nổi tiếng là người khảng khái, nóng nảy, cương trực, thấy chuyện gian tà thì không chịu được.
+Trong vùng có một ngôi đền vốn rất linh thiêng nhưng lại bị hồn ma của viên Bách hộ họ Thôi, một tên tướng giặc chết trận, chiếm giữ. Hắn giả danh Thổ công, tác oai tác quái, gây tai họa cho nhân dân.
+Biết chuyện, Tử Văn tức giận, cho rằng không thể để yêu quái hoành hành nên quyết định đốt đền.
+Chàng tắm gội sạch sẽ, khấn trời rồi châm lửa đốt đền. Sau khi đốt, mọi người đều kinh sợ, lo Tử Văn sẽ gặp tai họa.
+Tuy nhiên, Tử Văn vẫn điềm nhiên, không sợ hãi, cho thấy sự quyết đoán và bản lĩnh của một người chính trực.
+Phần 2: Tiếp đến “khó lòng thoát nạn” - Tử Văn gặp Thổ công và hồn ma họ Thôi
+Sau khi đốt đền, Tử Văn trở về thì thấy trong người khó chịu, rồi sốt nóng, sốt rét.
+Trong lúc mê man, một người cao lớn, khôi ngô, tự xưng là cư sĩ, đến đe dọa Tử Văn vì đã đốt đền.
+Tử Văn không hề sợ hãi, vẫn giữ thái độ cứng rắn, bình tĩnh.
+Đêm hôm đó, Thổ công xuất hiện và kể cho Tử Văn biết sự thật: ngôi đền vốn thuộc về mình nhưng bị viên Bách hộ họ Thôi, một tên tướng giặc phương Bắc chết trận, chiếm đoạt.
+Hồn ma họ Thôi đã giả danh Thổ công, làm nhiều việc gian ác và gây tai họa cho dân chúng.
+Thổ công cảm ơn Tử Văn vì đã đốt đền và mong chàng tiếp tục đấu tranh, đồng thời cảnh báo rằng hồn ma họ Thôi rất xảo quyệt và có thế lực.
+Hồn ma họ Thôi lại xuất hiện, vu cáo Tử Văn với Diêm Vương và đe dọa sẽ khiến chàng phải chịu tội.
+Tử Văn vẫn không khuất phục, quyết tâm bảo vệ lẽ phải dù biết mình có thể gặp nguy hiểm.
+Phần 3: Tiếp đến “sai lính đưa Tử Văn về” - Ngô Tử Văn thắng kiện
+Sau đó, Tử Văn đột nhiên chết, rồi bị hai tên quỷ sứ bắt xuống âm phủ.
+Tại Minh ti, Diêm Vương cho gọi Tử Văn đến xét xử vì tội đốt đền.
+Ban đầu, hồn ma họ Thôi tỏ ra rất đáng thương, liên tục vu cáo Tử Văn và khiến Diêm Vương có vẻ tin lời hắn.
+Tử Văn không hề hoảng sợ mà bình tĩnh kêu oan, khẳng định mình làm việc đúng.
+Chàng xin Diêm Vương cho người đến ngôi đền để kiểm chứng sự thật và yêu cầu đối chất với hồn ma họ Thôi.
+Trước những lời lẽ và bằng chứng của Tử Văn, sự gian trá của hồn ma dần bị vạch trần.
+Diêm Vương sai người đi kiểm tra và biết được những lời Tử Văn nói là đúng.
+Hồn ma họ Thôi bị vạch mặt, bị trừng trị; Thổ công được trả lại đền.
+Tử Văn được minh oan, Diêm Vương sai lính đưa chàng trở về dương thế.
+Phần 4: Phần còn lại - Tử Văn được bổ nhiệm làm Phán sự đền Tản Viên
+Sau khi trở về, Tử Văn kể lại chuyện xảy ra ở âm phủ cho mọi người nghe.
+Không lâu sau, Tử Văn gặp lại Thổ công trong một giấc mộng.
+Thổ công cho biết Tử Văn đã có công lớn trong việc trừ bỏ kẻ gian tà, bảo vệ chính nghĩa và đem lại sự bình yên cho dân chúng.
+Vì vậy, Tử Văn được đề nghị giữ chức Phán sự đền Tản Viên.
+Ban đầu Tử Văn còn nghi ngờ, nhưng sau đó nhận lời và chuẩn bị lên đường.
+Từ một người bình thường, Tử Văn trở thành người có nhiệm vụ giữ gìn công lí, phán xét đúng sai ở đền Tản Viên.
+Phần bình cuối truyện:
+Nguyễn Dữ khẳng định Tử Văn là người “không cứng mà không thể bẻ cong”, đại diện cho kiểu người cương trực, dũng cảm, dám đấu tranh chống lại cái ác.
+Tác giả đề cao những con người có bản lĩnh, không sợ quyền thế, dám đứng lên bảo vệ công lý.
+Qua câu chuyện của Tử Văn, Nguyễn Dữ thể hiện niềm tin rằng cái thiện, chính nghĩa cuối cùng sẽ chiến thắng cái ác, gian tà.
+Lời bình cũng có ý nghĩa phê phán những kẻ gian trá, bất chính, dù có quyền thế hay dùng thủ đoạn thì cuối cùng vẫn bị vạch trần và trừng phạt.
+Đồng thời, tác phẩm thể hiện tư tưởng nhân đạo và khát vọng công lí của Nguyễn Dữ: trong một xã hội còn nhiều bất công, con người vẫn luôn mong muốn có một công lý có thể bảo vệ người tốt và trừng trị kẻ xấu.
+
+
+Nghệ thuật và giá trị
+Nghệ thuật
+Tác giả xây dựng tình huống truyện hấp dẫn, các sự việc được sắp xếp liên tục, tạo kịch tính và lôi cuốn người đọc.
+Tác phẩm có những sự việc gần gũi với đời sống như cảnh dân chúng, quan lại, kiện tụng…, đồng thời kết hợp thế giới thần linh, ma quỷ, âm phủ, Diêm Vương. Yếu tố kì ảo giúp câu chuyện hấp dẫn và làm nổi bật cuộc đấu tranh giữa thiện và ác.
+Xây dựng nhân vật có tính cách rõ nét:
+Ngô Tử Văn: cương trực, khảng khái, dũng cảm, không khuất phục trước cái ác.
+Hồn ma Bách hộ họ Thôi: gian trá, xảo quyệt, tham lam, đại diện cho cái ác.
+Thổ công: yếu thế nhưng trung thực, đại diện cho người bị áp bức.
+Tác giả đặt Tử Văn – hồn ma họ Thôi, chính nghĩa – gian tà, sự thật – dối trá, người ngay – kẻ ác vào thế đối lập để làm nổi bật phẩm chất của nhân vật và tư tưởng tác phẩm.
+Lời bình trực tiếp giúp tác giả khẳng định quan điểm: đề cao người chính trực, phê phán kẻ gian tà và khẳng định công lí.
+Nội dung
+Giá trị hiện thực:
+Phản ánh một xã hội còn tồn tại nhiều bất công, gian tà và những thế lực xấu xa.
+Qua hình tượng hồn ma họ Thôi, tác giả phê phán những kẻ dựa vào quyền thế, dùng thủ đoạn để áp bức và làm hại người khác.
+Hình ảnh Thổ công bị chiếm đền cho thấy người lương thiện đôi khi bị cái ác lấn át và không đủ sức tự bảo vệ mình.
+Giá trị nhân đạo:
+Ca ngợi người chính trực, tiêu biểu là Ngô Tử Văn.
+Trân trọng những con người dám đứng lên chống lại cái ác, bảo vệ lẽ phải.
+Thể hiện sự cảm thông với những người lương thiện nhưng bị thế lực xấu xa áp bức.
+Gửi gắm khát vọng công lí: người tốt phải được bảo vệ, kẻ xấu phải bị trừng trị.
+Giá trị tư tưởng:
+Khẳng định quan niệm “chính thắng tà”.
+Cái ác có thể mạnh và xảo quyệt trong một thời gian nhưng cuối cùng sẽ bị vạch trần và trừng phạt.
+Con người cần có bản lĩnh, lòng dũng cảm và sự chính trực để bảo vệ công lý.
+
 VĂN BẢN 5: CHỮ NGƯỜI TỬ TÙ (Nguyễn Tuân)
 1. Tác giả, tác phẩm
 Nguyễn Tuân (1910–1987) quê làng Nhân Mục (nay thuộc quận Thanh Xuân, Hà Nội).
@@ -120,14 +253,13 @@ trực: chính trực, trực tiếp
 sĩ: chiến sĩ, dũng sĩ
 hiếu: hiếu học, hiếu chiến
 sinh: sinh viên, sinh tồn
-hàn: hàn đớ
+hàn: hàn lâm, hàn vi
 Bài 4. Chỉ ra lỗi dùng từ Hán Việt và sửa (gợi ý):
 a. "trí thức bổ ích" sai, vì trí thức là người có học vấn. Sửa thành tri thức (kiến thức, hiểu biết).
 b. "cứng cỏi, ngang tàng của hàn sĩ" có thể bị lệch sắc thái, vì ngang tàng hàm ý bướng bỉnh, bất chấp. Có thể sửa thành khí khái / cương trực.
 c. "yếu điểm" là điểm quan trọng. Dùng đúng nghĩa là nhược điểm (điểm yếu).
 
-Viết
-Viết văn bản nghị luận phân tích, đánh giá một tác phẩm truyện (chủ đề, những nét đặc sắc về hình thức nghệ thuật)
+VIẾT
 Viết văn bản nghị luận phân tích, đánh giá một tác phẩm truyện (chủ đề, những nét đặc sắc về hình thức nghệ thuật)
 Yêu cầu
 Nêu cảm nhận, quan điểm về một tác phẩm truyện
@@ -173,7 +305,7 @@ Chỉnh sửa, hoàn thiện
 Xem xét các luận điểm đã được làm sáng tỏ bằng những chi tiết cụ thể từ văn bản chưa; nếu chưa thì cần bổ sung để đảm bảo tất cả các phân tích, đánh giá đều có căn cứ thuyết phục. 
 Chỉnh sửa các lỗi chính tả và ngữ pháp tồn tại trong bài viết. Chú ý cách sử dụng từ Hán Việt; nếu có từ nào còn băn khoăn vì chưa hiểu thật rõ nghĩa, hãy tra cứu lại hoặc thay thế bằng từ khác. 
 
-Nói và nghe:
+NÓI VÀ NGHE
 Yêu Cầu:
 Nêu được tên truyện, tên tác giả, khái quát được giá trị nội dung và nghệ thuật của tác phẩm
 Trình bày được nhận định, đánh giá về tác phẩm truyện một cách thuyết phục: nêu luận điểm rõ ràng, phối hợp linh hoạt phương tiện ngôn ngữ và phi ngôn ngữ, làm nổi bật được nội dung thuyết trình,
