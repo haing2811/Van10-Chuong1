@@ -347,8 +347,13 @@
     var box = el("div", "img-slot");
     var meta = (window.IMAGES && window.IMAGES[block.file]) || {};
     var ph = el("div", null, null);
-    ph.appendChild(el("div", "ph-filename", "Ảnh: " + block.file));
-    ph.appendChild(el("div", "ph-brief", meta.brief || "Minh hoạ cho bài học. Mở IMAGES_NEEDED.md để xem mô tả ảnh cần tìm."));
+    // ph.appendChild(el("div", "ph-brief", meta.brief || "Minh hoạ cho bài học. Mở IMAGES_NEEDED.md để xem mô tả ảnh cần tìm."));
+    // Add Source line under each image — user will replace the link
+    var sourceAnchor = el("a", "ph-source", "Nguồn");
+    sourceAnchor.href = (window.IMAGES[block.file] && window.IMAGES[block.file].sourceUrl) || "https://example.com";
+    sourceAnchor.target = "_blank";
+    sourceAnchor.rel = "noopener noreferrer";
+    ph.appendChild(sourceAnchor);
     box.appendChild(ph);
     var img = new Image();
     // No loading="lazy" here: this Image is detached until onload fires, and a
@@ -359,7 +364,7 @@
       img.style.maxWidth = "100%";
       img.style.height = "auto";
       box.insertBefore(img, ph);
-      ph.style.display = "none";
+      // Keep ph visible so the Source line remains under the image
     };
     img.src = "images/" + block.file;
     return box;

@@ -6,11 +6,11 @@ window.CONTENT.doc = [
   source: "draft",
   blocks: [
     {type: "list", source: "draft", items: [
-      "Nhận biết và phân tích được một số yếu tố của truyện nói chung và thần thoại nói riêng như: cốt truyện, không gian, thời gian, nhân vật, lời người kể chuyện ngôi thứ ba và lời nhân vật.",
-      "Phân tích và đánh giá được chủ đề, tư tưởng, thông điệp của văn bản; phân tích được một số căn cứ để xác định chủ đề.",
-      "Viết được một văn bản nghị luận phân tích, đánh giá chủ đề và những nét đặc sắc về nghệ thuật của một tác phẩm truyện.",
-      "Biết thuyết trình (giới thiệu, đánh giá) về nội dung và nghệ thuật của một tác phẩm truyện.",
-      "Sống có khát vọng, có hoài bão và thể hiện được trách nhiệm với cộng đồng."
+      "Phân tích các yếu tố của truyện: cốt truyện, không gian, thời gian, nhân vật, lời người kể chuyện ngôi thứ ba và lời nhân vật.",
+      "Hiểu và đánh giá chủ đề, tư tưởng, thông điệp của văn bản, cùng các căn cứ để xác định chủ đề.",
+      "Viết bài nghị luận phân tích, đánh giá chủ đề và nét đặc sắc nghệ thuật của một tác phẩm truyện.",
+      "Thuyết trình giới thiệu, đánh giá nội dung và nghệ thuật của một tác phẩm truyện.",
+      "Sống có khát vọng, hoài bão và có trách nhiệm với cộng đồng."
     ]}
   ]
 },
@@ -85,22 +85,12 @@ window.CONTENT.doc = [
       "Tính cách: thần Gió phần vâng lời và có trách nhiệm, tuân theo mệnh lệnh của Ngọc Hoàng. Thỉnh thoảng thần thích xuống hạ giới đi chơi vào buổi tối, tạo ra những trận gió xoay bất chợt, thể hiện tính thất thường và khó lường của thiên tai."
     ]},
     {type: "p", source: "outline", text: "=> Truyện giải thích nguồn gốc, tính chất của gió và hiện tượng gió xoáy ở đồng bằng, cũng như giải thích sự xuất hiện của cây ngải gió. Truyện còn phản ánh kinh nghiệm thực tế của người xưa trong việc nhận biết sự thay đổi thời tiết và cách sử dụng lá cây ngải gió để chữa bệnh cảm gió cho trâu bò."},
-    {type: "h3", source: "draft", text: "Bài vè và thông tin về thần thoại Việt Nam (SGK tr. 12, 14)"},
-    {type: "list", source: "draft", items: [
-      "Bài vè còn lưu hành trong nhân dân: Nhất ông đếm cát, Nhì ông tát bể (biển), Ba ông kể sao, Bốn ông đào sông, Năm ông trồng cây, Sáu ông xây rú, Bảy ông trụ trời... Câu hát ấy chỉ là để so sánh tài năng của các nhân nhưng cũng cho ta biết một phần nào công việc hồi khai thiên lập địa.",
-      "Thần thoại Việt Nam cho đến nay vẫn là một di sản phong phú với hàng trăm truyện kể của người Kinh và các dân tộc thiểu số. Thần thoại Việt Nam gồm hai nhóm: thần thoại suy nguyên và thần thoại sáng tạo. Ở nhóm suy nguyên, nhiều truyện có cách hình dung, lí giải về sự hình thành thế giới tự nhiên, nguồn gốc con người và vạn vật, rất gần gũi với các hệ thống thần thoại khác trên thế giới. Nhân vật chính của thần thoại suy nguyên là các vị thần sáng tạo thế giới: trời đất, mặt trời, mặt trăng, sông biển, mưa, gió, sấm, sét, muôn loài. Nhóm truyện thần thoại sáng tạo có nhân vật chính là các anh hùng thần thoại và anh hùng văn hoá; kì tích của họ phản ánh vẻ đẹp riêng của cuộc sống lao động, tín ngưỡng và văn hoá của từng cộng đồng."
-    ]},
     {type: "h3", source: "draft", text: "So sánh 3 vị thần (tự điền rồi đối chiếu các mục trên)"},
     {type: "tablefill", source: "draft", id: "doc-bang-3than", title: "Bảng so sánh (tự điền rồi đối chiếu SGK tr. 11-13)", columns: ["Vị thần", "Hình dạng", "Tính khí", "Công việc", "Ý nghĩa"], rows: [["Thần Trụ Trời", null, null, null, null], ["Thần Sét", null, null, null, null], ["Thần Gió", null, null, null, null]], suggested: [["Thần Trụ Trời", "Thân thể to lớn không biết bao nhiêu mà kể", "Cần cù; huyền bí, khó hiểu (phá cột không rõ lí do)", "Đội trời, đắp cột chống trời; phá cột, ném đất đá tạo núi, đảo, biển", "Giải thích nguồn gốc trời đất; ca ngợi sức lao động và tầm vóc con người cổ đại"], ["Thần Sét", "Mặt mũi nanh ác, tiếng quát dữ dội", "Rất nóng nảy, hễ sai là đi, hễ thấy là đánh", "Thi hành luật pháp ở trần gian bằng búa đá; ngủ đông, tháng Hai-Ba dậy làm việc", "Phản ánh quan niệm thưởng phạt; tiếng sấm gắn với nỗi sợ và đạo lí"], ["Thần Gió", "Kì quặc, không có đầu; quạt màu nhiệm", "Nghich ngợm qua đứa con nhỏ", "Làm gió nhỏ hay bão lớn theo lệnh Ngọc Hoàng; con hoá cây ngải báo gió", "Giải thích gió bão; gắn hiện tượng tự nhiên với đời sống (ngải gió chữa trâu cảm gió)"]]},
     {type: "h3", source: "draft", text: "Trả lời câu hỏi SGK tr. 14 (câu hỏi chép nguyên văn; đáp án là gợi ý)"},
     {type: "qa", source: "draft", id: "doc-vb123-c1", q: "1. Xác định thời gian, không gian, nhân vật và sự kiện chính trong từng truyện kể.", a: "Gợi ý: Thần Trụ Trời — thời gian không xác định (thuở chưa có vũ trụ), không gian hỗn độn rồi trời đất phân đôi; nhân vật: thần Trụ Trời; sự kiện: đội trời, đắp cột, phá cột tạo núi biển. Thần Sét — thời gian theo mùa (ngủ đông, dậy tháng Hai-Ba); nhân vật: thần Sét (Thiên Lôi), Ngọc Hoàng, Cường Bạo Đại vương; sự kiện: đánh kẻ ác bằng búa đá, bị phạt nằm im, giật mình vì tiếng gà. Thần Gió — không gian trời và hạ giới; nhân vật: thần Gió, đứa con, người nông dân mất gạo, Ngọc Hoàng; sự kiện: con quạt đổ bát gạo, kiện lên thiên đình, con bị đày rồi hoá cây ngải gió."},
     {type: "qa", source: "draft", id: "doc-vb123-c2", q: "2. Hãy chỉ ra một số dấu hiệu giúp người đọc nhận biết ba truyện kể trên thuộc nhóm thần thoại suy nguyên.", a: "Gợi ý: kể về nguồn gốc vũ trụ và muôn loài (trời đất, sấm sét, gió bão); nhân vật là các vị thần sáng tạo thế giới; thời gian phiếm chỉ, không gian vũ trụ; cách lí giải hồn nhiên, tưởng tượng về hiện tượng tự nhiên."},
     {type: "qa", source: "draft", id: "doc-vb123-c3", q: "3. Trong cái nhìn của con người thời cổ đại, thần Trụ Trời, thần Gió, thần Sét có hình dạng và tính khí ra sao? Sự tưởng tượng về các vị thần ấy được hình thành trên cơ sở nào?", a: "Gợi ý: thân thể khổng lồ, mặt mũi nanh ác, hình dạng kì quặc (không đầu), tính khí nóng nảy hoặc cần cù. Hình dung ấy bắt nguồn từ việc quan sát, phóng đại sức mạnh tự nhiên (trời cao, sấm dữ, gió mạnh) và gắn với đời sống lao động của người xưa."},
-    {type: "qa", source: "draft", id: "doc-vb123-c4", q: "4. Công việc của thần Trụ Trời, thần Sét và thần Gió là gì? Công việc đó được miêu tả như thế nào, nhằm mục đích gì?", a: "Gợi ý: Trụ Trời phân khai trời đất; Sét thi hành luật pháp trần gian; Gió làm gió theo lệnh Ngọc Hoàng. Miêu tả bằng chi tiết kì ảo, phóng đại (đắp cột, bổ búa đá, quạt màu nhiệm) nhằm giải thích nguồn gốc sự vật và gửi gắm khát vọng chinh phục thiên nhiên."},
-    {type: "qa", source: "draft", id: "doc-vb123-c5", q: "5. Hình tượng thần Trụ Trời, thần Sét và thần Gió phản ánh những quan niệm, nhận thức gì của người xưa về thế giới tự nhiên? Những khát vọng nào đã được họ gửi vào các hình tượng đó?", a: "Gợi ý: quan niệm vạn vật hữu linh, mọi hiện tượng đều do thần làm ra; nhận thức hồn nhiên về trời đất, sấm, gió. Khát vọng lí giải thế giới, chinh phục thiên nhiên, lao động sáng tạo và sống công bằng (thần Sét trừng phạt kẻ ác)."},
-    {type: "qa", source: "draft", id: "doc-vb123-c6", q: "6. Chỉ ra những đặc điểm nổi bật trong cách xây dựng nhân vật của chùm truyện. Từ đó, nhận xét về thái độ, tình cảm của người xưa đối với thế giới tự nhiên.", a: "Gợi ý: nhân vật phi thường, ngoại hình phóng đại, gắn với một hiện tượng tự nhiên, hành động lặp đi lặp lại thành quy luật. Thái độ vừa sợ hãi, kính nể vừa muốn lí giải, chinh phục và sống hoà hợp với tự nhiên."},
-    {type: "qa", source: "draft", id: "doc-vb123-c7", q: "7. Trong những điều làm nên vẻ đẹp một đi không trở lại của thần thoại, có niềm tin thiêng liêng về một thế giới mà ở đó vạn vật đều có linh hồn. Theo bạn, niềm tin ấy có còn sức hấp dẫn với con người hiện đại không? Vì sao?", a: "Gợi ý: tự nêu quan điểm có lí lẽ. Ví dụ: còn hấp dẫn vì nuôi dưỡng trí tưởng tượng, ý thức bảo vệ thiên nhiên (mọi vật đều có linh hồn nên cần tôn trọng); hoặc ít hấp dẫn vì khoa học đã lí giải được nhiều hiện tượng, nhưng vẫn đẹp như di sản văn hoá."},
-    {type: "write150", source: "draft", id: "doc-vb123-150", prompt: "Kết nối đọc - viết (SGK tr. 14): Viết đoạn văn (khoảng 150 chữ) phân tích một chi tiết kì ảo trong một truyện thần thoại đã học hoặc tự đọc thêm."},
     {type: "quiz", source: "outline", id: "doc-quiz-than", title: "Tự kiểm tra: truyện thần thoại và Thần Trụ Trời", questions: [
       {q: "Truyện thần thoại là phương pháp người xưa dùng để làm gì?", options: ["Giải thích thế giới", "Ghi chép lịch sử chính xác", "Dạy nghề thủ công", "Kể chuyện cười"], answer: 0, explain: "Truyện thần thoại là phương pháp người xưa dùng để giải thích thế giới."},
       {q: "Cốt truyện thần thoại có đặc điểm gì?", options: ["Đơn giản, đơn tuyến", "Nhiều tuyến phức tạp", "Không có sự kiện", "Chỉ có đối thoại"], answer: 0, explain: "Cốt truyện đơn giản, đơn tuyến, tổng hợp lại thành hệ thần thoại."},
@@ -155,13 +145,13 @@ window.CONTENT.doc = [
   blocks: [
     {type: "h3", source: "outline", text: "Nội dung"},
     {type: "list", source: "outline", items: [
-      "Lý giải nguồn gốc thế giới và các hiện tượng tự nhiên: Những câu trả lời này chưa dựa trên khoa học mà dựa trên trí tưởng tượng và niềm tin vào các lực lượng siêu nhiên. Qua đó, thần thoại cho thấy nhận thức còn hồn nhiên, chất phác nhưng giàu trí tưởng tượng của con người thời cổ đại.",
-      "Thể hiện khát vọng chinh phục thiên nhiên: Thiên nhiên đối với con người thời cổ đại vừa gần gũi vừa đầy sức mạnh và nguy hiểm, vì vậy, con người tưởng tượng ra những vị thần hoặc người anh hùng có sức mạnh phi thường. Sức mạnh đó thường để tạo lập thế giới, chống lại thế lực nguy hiểm và mang lại cuộc sống ổn định cho con người. Điều này thể hiện khát vọng làm chủ thiên nhiên và cuộc sống của con người.",
-      "Ca ngợi sức mạnh và trí tuệ của con người: Mặc dù nhân vật thường mang màu sắc thần linh, đằng sau những hình tượng ấy vẫn là ước mơ của con người. Những mong ước như có sức mạnh to lớn và quyền lực để tự chủ trong đời sống là sự lý tưởng hóa sức mạnh và khát vọng của cộng đồng.",
-      "Thể hiện trí tưởng tượng phong phú của người xưa: Thông qua những câu chuyện về thần linh, người khổng lồ, những chiến công phi thường…, ta thấy người xưa có khả năng tưởng tượng rất mạnh mẽ."
+      "Lý giải nguồn gốc thế giới và hiện tượng tự nhiên: Những lời giải thích này dựa trên trí tưởng tượng và niềm tin vào lực lượng siêu nhiên, thể hiện nhận thức hồn nhiên, chất phác của con người thời cổ đại.",
+      "Thể hiện khát vọng chinh phục thiên nhiên: Thiên nhiên vừa gần gũi vừa đầy sức mạnh và hiểm nguy, nên người xưa tưởng tượng ra các vị thần, người anh hùng phi thường để tạo lập thế giới, chống lại thế lực hung bạo, mang lại cuộc sống ổn định. Đó là khát vọng làm chủ thiên nhiên và cuộc sống.",
+      "Ca ngợi sức mạnh và trí tuệ của con người: Đằng sau màu sắc thần linh là ước mơ về sức mạnh, quyền lực để tự chủ trong đời sống, tức là sự lý tưởng hóa sức mạnh và khát vọng của cộng đồng.",
+      "Thể hiện trí tưởng tượng phong phú: Những câu chuyện về thần linh, người khổng lồ, chiến công phi thường… cho thấy khả năng tưởng tượng mạnh mẽ của người xưa."
     ]},
     {type: "h3", source: "outline", text: "Chủ đề"},
-    {type: "p", source: "outline", text: "Truyện thần thoại thể hiện cách con người thời cổ đại nhận thức, lý giải về nguồn gốc thế giới, thiên nhiên và con người bằng trí tưởng tượng; đồng thời thể hiện khát vọng khám phá, chinh phục và làm chủ thiên nhiên, cùng niềm tin vào sức mạnh của con người."}
+    {type: "p", source: "outline", text: "Truyện thần thoại thể hiện cách người xưa nhận thức, lý giải nguồn gốc thế giới, thiên nhiên và con người bằng trí tưởng tượng; đồng thời thể hiện khát vọng khám phá, chinh phục, làm chủ thiên nhiên và niềm tin vào sức mạnh của con người."}
   ]
 },
 {
@@ -191,13 +181,6 @@ window.CONTENT.doc = [
       "Là tập truyện truyền kỳ gồm 20 truyện.",
       "Được xem là tác phẩm tiêu biểu của văn xuôi tự sự trung đại Việt Nam.",
       "Tác phẩm được viết dựa trên chất liệu từ những câu chuyện dân gian, truyền thuyết, lịch sử và đời sống, nhưng Nguyễn Dữ đã sáng tạo, tổ chức lại thành những truyện có giá trị tư tưởng và nghệ thuật sâu sắc."
-    ]},
-    {type: "h3", source: "draft", text: "Thông tin thêm từ SGK (tr. 20)"},
-    {type: "list", source: "draft", items: [
-      "Chuyện chức Phán sự đền Tản Viên trích từ Truyền kì mạn lục (Ghi chép tản mạn những chuyện kì lạ), sáng tác khoảng nửa đầu thế kỉ XVI, theo thể loại truyền kì.",
-      "Tập truyện gồm 20 truyện, viết bằng chữ Hán với hình thức văn xuôi xen lẫn thơ, ca, từ, biền văn; cuối mỗi truyện đều có lời bình.",
-      "Truyền kì mạn lục phong phú về đề tài, có giá trị tư tưởng và nghệ thuật đặc sắc, được đánh giá là đỉnh cao của thể loại truyền kì Việt Nam thời trung đại.",
-      "Chuyện chức Phán sự đền Tản Viên thuộc nhóm truyện viết về đề tài Nho sĩ."
     ]},
     {type: "h3", source: "outline", text: "Tình huống truyện"},
     {type: "list", source: "outline", items: [
@@ -268,7 +251,6 @@ window.CONTENT.doc = [
     ]},
     {type: "p", source: "outline", text: "Tác giả đặt Tử Văn – hồn ma họ Thôi, chính nghĩa – gian tà, sự thật – dối trá, người ngay – kẻ ác vào thế đối lập để làm nổi bật phẩm chất của nhân vật và tư tưởng tác phẩm."},
     {type: "p", source: "outline", text: "Lời bình trực tiếp giúp tác giả khẳng định quan điểm: đề cao người chính trực, phê phán kẻ gian tà và khẳng định công lí."},
-    {type: "p", source: "outline", text: "Nội dung"},
     {type: "p", source: "outline", text: "Giá trị hiện thực:"},
     {type: "list", source: "outline", items: [
       "Phản ánh một xã hội còn tồn tại nhiều bất công, gian tà và những thế lực xấu xa.",
@@ -292,9 +274,6 @@ window.CONTENT.doc = [
     {type: "qa", source: "draft", id: "doc-vb4-c1", q: "1. Xác định người kể chuyện trong Chuyện chức Phán sự đền Tản Viên. Những lời kể nào giúp bạn có được sự hình dung ban đầu về tính cách của nhân vật Tử Văn?", a: "Gợi ý: người kể chuyện ngôi thứ ba. Lời giới thiệu: Chàng vốn khảng khái, nóng nảy, thấy sự tà gian thì không thể chịu được, vùng Bắc người ta vẫn khen là một người cương trực."},
     {type: "qa", source: "draft", id: "doc-vb4-c2", q: "2. Nêu các sự kiện chính của câu chuyện. Các sự kiện đó được trình bày theo trình tự nào?", a: "Gợi ý: đốt đền; gặp tên tướng giặc và Thổ công; bị bắt xuống Minh ti và phiên xử án; trở về, nhận chức Phán sự, lời bình. Trình tự thời gian tuyến tính, gắn với các mốc đốt đền, lên cơn sốt, xuống âm phủ, sống lại, nhận chức."},
     {type: "qa", source: "draft", id: "doc-vb4-c3", q: "3. Tóm tắt diễn biến câu chuyện xử án. Chỉ ra các yếu tố góp phần làm nên chiến thắng của Tử Văn trong phiên toà. Theo bạn, yếu tố nào đóng vai trò quyết định trong chiến thắng đó?", a: "Gợi ý: Tử Văn kêu oan, đối chất cứng cỏi, xin tư giấy đến đền Tản Viên; sai nhân xác minh đúng lời Tử Văn; tên tướng giặc bị trị tội. Các yếu tố: sự cứng cỏi, lời làm chứng của Thổ công, chứng cứ ở đền Tản Viên. Yếu tố quyết định do em chọn và lí giải (ví dụ: sự cứng cỏi và có chứng cứ xác thực)."},
-    {type: "qa", source: "draft", id: "doc-vb4-c4", q: "4. Nhân vật Tử Văn được khắc hoạ chủ yếu qua những chi tiết nào? Chọn phân tích một số chi tiết tiêu biểu, từ đó, nhận xét khái quát về tính cách nhân vật này.", a: "Gợi ý: lời giới thiệu trực tiếp (khảng khái, cương trực); hành động đốt đền; lời đối đáp cứng cỏi trước Diêm Vương (không chịu nhún nhường, xin tư giấy). Khái quát: cương trực, dũng cảm, tin vào lẽ phải."},
-    {type: "qa", source: "draft", id: "doc-vb4-c5", q: "5. Sáng tạo chi tiết người đi đường gặp Tử Văn ngồi trên xe quan Phán sự và việc người đời sau truyền nhau về nhà quan Phán sự, tác giả muốn nhấn mạnh điều gì?", a: "Gợi ý: khẳng định chiến thắng của chính nghĩa kéo dài đến cõi dương; người tốt được ghi nhận, lưu danh; tăng tính xác thực và sức lan toả của lẽ phải."},
-    {type: "qa", source: "draft", id: "doc-vb4-c6", q: "6. Thế giới thần linh, ma quỷ trong truyện là sản phẩm hư cấu nghệ thuật của Nguyễn Dữ. Khám phá thế giới đó, bạn hiểu thêm được điều gì về chủ đề của tác phẩm?", a: "Gợi ý: thế giới âm phủ soi chiếu thế giới trần gian (có kiện tụng, xét xử, hối lộ thần); qua đó tác giả tố cáo cái ác lộng hành và khẳng định niềm tin chính trực thắng gian tà."},
     {type: "qa", source: "draft", id: "doc-vb4-c7", q: "7. Nêu quan niệm về kẻ sĩ được thể hiện trong lời bình cuối truyện. Bạn có đồng tình với quan niệm đó không? Vì sao?", a: "Gợi ý: Kẻ sĩ chỉ lo không cứng cỏi được, còn gãy hay không là việc của trời. Nêu ý kiến cá nhân có lí lẽ (đồng tình vì đề cao khí phách, hoặc bổ sung rằng cứng cỏi cần đi cùng trí tuệ...)."},
     {type: "write150", source: "draft", id: "doc-vb4-150", prompt: "Kết nối đọc - viết (SGK tr. 20): Viết đoạn văn (khoảng 150 chữ) phân tích một yếu tố làm nên sức hấp dẫn của câu chuyện trong Chuyện chức Phán sự đền Tản Viên."}
   ]
@@ -378,10 +357,6 @@ window.CONTENT.doc = [
     {type: "qa", source: "draft", id: "doc-vb5-c1", q: "1. Hãy xác định tình huống truyện trong Chữ người tử tù.", a: "Gợi ý: hai con người đối lập về vị thế (tử tù và người giữ tù) lại gặp nhau ở sự yêu quý cái đẹp và trọng người tài. Đó là tình huống trớ trêu mà đặc sắc."},
     {type: "qa", source: "draft", id: "doc-vb5-c2", q: "2. Lời kể về nhân vật quản ngục (trong phần 1) là của ai? Lời kể ấy tác động đến cách nhìn của bạn về nhân vật này như thế nào?", a: "Gợi ý: lời kể của người kể chuyện ngôi thứ ba (có xen lời nhân vật). Cách kể hé mở nội tâm (ngồi một mình dưới ngọn đèn dầu, suy nghĩ về thầy thơ lại, sợ bị tố giác) khiến người đọc thấy quản ngục là một thanh âm trong trẻo giữa bản đàn hỗn loạn: biết trọng tài, trọng nhân cách."},
     {type: "qa", source: "draft", id: "doc-vb5-c3", q: "3. Sự kiện nào đã tạo nên bước chuyển trong thái độ của Huấn Cao với quản ngục? Sau sự kiện ấy, mối quan hệ của họ đã thay đổi như thế nào?", a: "Gợi ý: thầy thơ lại hớt hơ hớt hải kể lòng quản ngục và báo tin ngày mai Huấn Cao bị giải về kinh chịu án. Huấn Cao lặng nghĩ rồi mỉm cười, nhận lời cho chữ tối nay. Từ khinh bạc (đuổi quản ngục ra khỏi buồng giam) chuyển sang cảm động, trân trọng: Thiếu chút nữa, ta đã phụ mất một tấm lòng trong thiên hạ."},
-    {type: "qa", source: "draft", id: "doc-vb5-c4", q: "4. Nhân vật Huấn Cao được tác giả khắc hoạ qua những chi tiết tiêu biểu nào? Hãy dựa vào các chi tiết đó để khái quát đặc điểm tính cách Huấn Cao.", a: "Gợi ý: chúc mũi gông, thúc mạnh đầu gông xuống thềm đá mà bình thản; thản nhiên nhận rượu thịt; khinh bạc đuổi quản ngục; dậm tô nét chữ trong gông xiềng; lời khuyên giữ thiên lương. Khái quát: tài hoa, khí phách coi thường cường quyền, thiên lương cao đẹp."},
-    {type: "qa", source: "draft", id: "doc-vb5-c5", q: "5. Chỉ ra các yếu tố khiến cảnh cho chữ trở thành một cảnh tượng xưa nay chưa từng có. Hãy phân tích ý nghĩa của cảnh tượng kì lạ đó.", a: "Gợi ý: bối cảnh buồng tối chật hẹp, ẩm ướt đối lập với tấm lụa trắng và nét chữ vuông vắn; tử tù cho chữ, quản ngục xin chữ; tử tù ung dung uy nghi, quản ngục khúm núm run rẩy. Ý nghĩa: cái đẹp và thiên lương chiến thắng bóng tối, sự tàn bạo."},
-    {type: "qa", source: "draft", id: "doc-vb5-c6", q: "6. Theo bạn, tác giả đã gửi gắm những thông điệp gì qua câu chuyện xin chữ và cho chữ?", a: "Gợi ý: cái đẹp và cái thiện có thể toả sáng ngay trong nơi tăm tối nhất; phải trân trọng tài năng và nhân cách; cần giữ thiên lương khỏi bị vấy bẩn (về quê mà ở, thoát khỏi nghề này rồi hãy nghĩ đến chuyện chơi chữ)."},
-    {type: "qa", source: "draft", id: "doc-vb5-c7", q: "7. Nêu và nhận xét về một điểm chung mà bạn nhận thấy giữa hai nhân vật Tử Văn (Chuyện chức Phán sự đền Tản Viên, Nguyễn Dữ) và Huấn Cao (Chữ người tử tù, Nguyễn Tuân).", a: "Gợi ý: cả hai đều cương trực, khí phách, dám đối mặt với cường quyền và cái ác; đều được khắc hoạ như hiện thân của lẽ phải và vẻ đẹp nhân cách còn sót lại giữa thời buổi nhiễu nhương."},
     {type: "h3", source: "draft", text: "Nghệ thuật đặc sắc để làm đoạn văn 150 chữ"},
     {type: "list", source: "draft", items: [
       "Tình huống truyện trớ trêu, đặc sắc.",

@@ -1,0 +1,23 @@
+HEADING: Phần 3: Huấn Cao cảm động và nhận lời cho chữ
+
+ITEM 0 (35 words, last index 34)
+0:Quản  1:ngục  2:nhận  3:được  4:công  5:văn  6:mới:  7:Hình  8:bộ  9:Thượng  10:thư  11:bắt  12:giải  13:Huấn  14:Cao  15:và  16:đồng  17:chí  18:vào  19:kinh,  20:ngày  21:mai  22:tinh  23:mơ  24:sẽ  25:có  26:người  27:đến  28:giải  29:đi.  30:Đây  31:là  32:đêm  33:cuối  34:cùng.
+
+ITEM 1 (46 words, last index 45)
+0:Quản  1:ngục  2:kể  3:tâm  4:sự  5:cho  6:thầy  7:thơ  8:lại.  9:Thầy  10:cảm  11:động,  12:bảo  13:ông  14:cứ  15:yên  16:tâm,  17:rồi  18:chạy  19:xuống  20:phía  21:trại  22:giam,  23:hớt  24:hơ  25:hớt  26:hải  27:kể  28:cho  29:Huấn  30:Cao  31:nghe  32:lòng  33:quản  34:ngục  35:và  36:báo  37:ông  38:biết  39:việc  40:về  41:kinh  42:chịu  43:án  44:tử  45:hình.
+
+ITEM 2 (33 words, last index 32)
+0:Huấn  1:Cao  2:lặng  3:nghĩ  4:một  5:lát  6:rồi  7:mỉm  8:cười.  9:Ông  10:nói  11:tối  12:nay,  13:khi  14:lính  15:canh  16:trại  17:về  18:nghỉ,  19:hãy  20:đem  21:lụa,  22:mực,  23:bút  24:và  25:một  26:bó  27:đuốc  28:xuống  29:để  30:ông  31:cho  32:chữ.
+
+ITEM 3 (23 words, last index 22)
+0:Lời  1:của  2:Huấn  3:Cao:  4:"Ta  5:nhất  6:sinh  7:không  8:vì  9:vàng  10:ngọc  11:hay  12:quyền  13:thế  14:mà  15:phải  16:ép  17:mình  18:viết  19:câu  20:đối  21:bao  22:giờ."
+
+ITEM 4 (19 words, last index 18)
+0:Đời  1:ông  2:chỉ  3:mới  4:viết  5:hai  6:bộ  7:tứ  8:bình  9:và  10:một  11:bức  12:trung  13:đường  14:cho  15:ba  16:người  17:bạn  18:thân.
+
+ITEM 5 (11 words, last index 10)
+0:Ông  1:cảm  2:tấm  3:lòng  4:"biệt  5:nhỡn  6:liên  7:tài"  8:của  9:quản  10:ngục.
+
+ITEM 6 (13 words, last index 12)
+0:"Thiếu  1:chút  2:nữa,  3:ta  4:đã  5:phụ  6:mất  7:một  8:tấm  9:lòng  10:trong  11:thiên  12:hạ."
+

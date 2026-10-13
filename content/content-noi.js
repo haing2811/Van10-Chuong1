@@ -18,7 +18,6 @@ window.CONTENT.noi = [
       "Tìm ý và sắp xếp ý",
       "Xác định từ ngữ then chốt"
     ]},
-    {type: "p", source: "draft", text: "Ghi chú đối chiếu: yêu cầu thứ hai trong outline kết thúc bằng dấu phẩy. SGK tr. 35 viết đầy đủ: Trình bày được các nhận định, đánh giá về tác phẩm truyện một cách thuyết phục: nêu luận điểm rõ ràng, phối hợp linh hoạt phương tiện ngôn ngữ và phi ngôn ngữ, làm nổi bật được nội dung thuyết trình. Nội dung trên trang giữ nguyên wording của outline theo quy tắc nguồn."}
   ]
 },
 {

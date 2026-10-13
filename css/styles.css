@@ -490,6 +490,26 @@ table.review th:last-child {
   font-size: .9rem;
 }
 
+/* Faint source line under each image slot */
+.img-slot .ph-source {
+  display: block;
+  margin: var(--space-2) 0;
+  padding: var(--space-1) var(--space-2);
+  background: var(--surface-qa);
+  border: 1px solid var(--slip-edge);
+  border-radius: var(--radius-seal);
+  font-family: var(--font-ui);
+  font-size: .78rem;
+  color: var(--text-quiet);
+  text-align: center;
+}
+
+.img-slot .ph-source:hover {
+  background: var(--tint-active);
+  color: var(--text-ink);
+  text-decoration: none;
+}
+
 /* ---- Site footer ---- */
 .site-footer {
   max-width: 70rem;
