@@ -58,7 +58,7 @@
           a.textContent = h.tabName + " — " + h.title;
           var src = document.createElement("span");
           src.className = "hit-src";
-          src.textContent = h.source === "draft" ? " (chưa duyệt)" : "";
+          src.textContent = "";
           a.appendChild(src);
           li.appendChild(a);
           ul.appendChild(li);
